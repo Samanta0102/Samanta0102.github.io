@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Il Mio Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { opacity: 0.7; }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 2rem;
+      border-left: 5px solid #111;
+      padding-left: 10px;
+    }
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform .2s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 { margin-top: 0; }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background: #111;
+      color: white;
+      margin-top: 4rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Nome Cognome</h1>
+    <p>Ruolo / Professione</p>
+  </header>
+
+  <nav>
+    <a href="#about">Chi Sono</a>
+    <a href="#projects">Progetti</a>
+    <a href="#contact">Contatti</a>
+  </nav>
+
+  <section id="about">
+    <h2>Chi Sono</h2>
+    <p>
+      Scrivi qui una breve presentazione su di te: chi sei, cosa fai, quali sono le tue competenze 
+      principali e cosa ti appassiona. Questo testo è completamente personalizzabile.
+    </p>
+  </section>
+
+  <section id="projects">
+    <h2>Progetti</h2>
+    <div class="projects">
+      <div class="card">
+        <h3>Progetto 1</h3>
+        <p>Descrizione breve del progetto. Puoi inserire un link, un'immagine o il codice.</p>
+      </div>
+      <div class="card">
+        <h3>Progetto 2</h3>
+        <p>Un altro esempio di progetto da mostrare nel tuo portfolio.</p>
+      </div>
+      <div class="card">
+        <h3>Progetto 3</h3>
+        <p>Aggiungi tutti i progetti che vuoi: la griglia è automatica.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contatti</h2>
+    <p>Email: <strong>tuaemail@example.com</strong></p>
+    <p>LinkedIn / Instagram / GitHub: aggiungi qui i tuoi link.</p>
+  </section>
+
+  <footer>
+    © 2025 - Il Mio Portfolio
+  </footer>
+
+</body>
+</html>

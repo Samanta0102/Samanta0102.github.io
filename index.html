@@ -1,51 +1,87 @@
 <!doctype html>
 <html lang="it">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Samanta Bua • Graphic & Digital Design</title>
+
+  <title>Samanta Bua — Graphic Designer</title>
+
+  <!-- Google Font serif elegante -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      padding: 0;
-      background: #fdfdfb;
+      font-family: "Playfair Display", serif;
+      background: #fafafa;
       color: #111;
       line-height: 1.6;
     }
 
     header {
-      padding: 20px 40px;
-      border-bottom: 1px solid #eee;
       display: flex;
-      justify-content: space-between;
-      align-items: center;
+      justify-content: flex-end;
+      padding: 28px 60px;
+      font-size: 16px;
+      letter-spacing: 0.04em;
     }
 
-    nav a {
-      margin-left: 20px;
+    header a {
       text-decoration: none;
       color: #111;
-      font-size: 15px;
+      margin-left: 32px;
     }
 
-    nav a:hover {
+    header a:hover {
       text-decoration: underline;
     }
 
     .hero {
-      padding: 120px 40px 80px;
+      padding: 120px 60px 80px;
+      max-width: 800px;
     }
 
     h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      font-size: 64px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      margin: 0 0 12px;
+    }
+
+    .gold {
+      color: #b49a5a;
     }
 
     p {
-      font-size: 18px;
-      max-width: 600px;
+      font-size: 22px;
+      font-weight: 400;
+      margin: 18px 0;
+    }
+
+    .lead {
+      font-size: 26px;
+      font-weight: 500;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        justify-content: center;
+        padding: 20px;
+      }
+
+      .hero {
+        padding: 80px 20px 40px;
+      }
+
+      h1 {
+        font-size: 42px;
+      }
+
+      p {
+        font-size: 18px;
+      }
     }
   </style>
 
@@ -54,27 +90,28 @@
 <body>
 
 <header>
-  <div><strong>Samanta Bua</strong></div>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#">Portfolio</a>
-    <a href="#">CV</a>
-    <a href="#">Contatti</a>
-  </nav>
+  <a href="#">Portfolio</a>
+  <a href="#">CV</a>
+  <a href="#">Contatti</a>
 </header>
 
 <section class="hero">
-  <h1>Ciao, sono Samanta 💛</h1>
 
-  <p>
-    Graphic designer con esperienza in brand identity, content creation,
-    graphic design per stampa e digitale, e gestione social media.
+  <h1>Samanta Bua<span class="gold">.</span></h1>
+
+  <p class="lead">
+    Graphic & Digital Designer con un’estetica editoriale, minimal e sofisticata.
   </p>
 
   <p>
-    Sto costruendo questo sito per condividere i miei progetti e raccontare la mia visione creativa.
+    Mi occupo di brand identity, content creation e graphic design per stampa e digitale.
+    Racconto i progetti con attenzione ai dettagli, estetica e coerenza visiva.
   </p>
+
+  <p>
+    Portfolio in costruzione — presto online<span class="gold">.</span>
+  </p>
+
 </section>
 
 </body>

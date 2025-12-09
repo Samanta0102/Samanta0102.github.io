@@ -1,260 +1,288 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio – Samanta Bua</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Samanta Bua – Graphic Designer</title>
 
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+  <style>
+    /* RESET BASE */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            margin: 0;
-            padding: 0;
-            background: #000;
-            color: #F9F6D5;
-            font-family: 'Inter', sans-serif;
-        }
+    body {
+      margin: 0;
+      padding: 0;
+      background: #000;
+      color: #f9f6d5;
+      font-family: "Inter", sans-serif;
+    }
 
-        /* NAVIGATION */
-        nav {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 20px 50px;
-            display: flex;
-            justify-content: flex-end;
-            background: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(6px);
-            z-index: 1000;
-        }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            margin-left: 32px;
-            font-size: 15px;
-            letter-spacing: 1px;
-            transition: 0.25s;
-        }
+    /* NAV */
 
-        nav a:hover {
-            color: #5BA5C4;
-        }
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 40px;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+    }
 
-        /* PAGE LAYOUT */
-        main {
-            max-width: 1100px;
-            margin: 120px auto 80px;
-            padding: 0 24px 40px;
-        }
+    nav a {
+      font-size: 15px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #f9f6d5;
+      opacity: 0.9;
+      transition: color 0.25s ease, opacity 0.25s ease;
+    }
 
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 42px;
-            margin-bottom: 10px;
-            color: #F9F6D5;
-        }
+    nav a:hover {
+      color: #5ba5c4;
+      opacity: 1;
+    }
 
-        .intro {
-            font-size: 16px;
-            color: #cfcfcf;
-            max-width: 620px;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
+    /* LAYOUT HERO */
 
-        .projects-list {
-            display: flex;
-            flex-direction: column;
-            gap: 40px;
-        }
+    .hero {
+      min-height: 100vh;
+      padding: 120px 7vw 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 56px;
+    }
 
-        .project-card {
-            display: flex;
-            align-items: flex-start;
-            gap: 28px;
-            padding: 24px;
-            border-radius: 18px;
-            background: radial-gradient(circle at top left, #151515 0%, #050505 60%);
-            box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
-        }
+    .left,
+    .center,
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-        .project-thumb {
-            flex-shrink: 0;
-            width: 220px;              /* ⬅ circa metà di prima */
-        }
+    .left,
+    .right {
+      flex: 0 0 26%;
+      align-items: center;
+    }
 
-        .project-thumb a {
-            display: block;
-        }
+    .center {
+      flex: 1;
+      max-width: 520px;
+    }
 
-        .project-thumb img {
-            width: 100%;
-            height: auto;
-            border-radius: 14px;
-            display: block;
-        }
+    .left img,
+    .right img {
+      width: 100%;
+      height: auto;
+      max-height: 80vh;
+      object-fit: contain; /* così non ti taglia mai il volto */
+      border-radius: 14px;
+      display: block;
+    }
 
-        .project-content {
-            flex: 1;
-        }
+    /* TESTI */
 
-        .project-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 24px;
-            margin: 0 0 6px;
-            color: #F9F6D5;
-        }
+    .name {
+      font-family: "Playfair Display", serif;
+      font-size: 58px;
+      line-height: 1.1;
+      font-weight: 600;
+      margin-bottom: 18px;
+      color: #f9f6d5;
+    }
 
-        .project-subtitle {
-            font-size: 14px;
-            color: #5BA5C4;
-            margin-bottom: 14px;
-        }
+    .subtitle {
+      font-size: 15px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #5ba5c4;
+      margin-bottom: 24px;
+      white-space: nowrap; /* tutto su una riga */
+    }
 
-        .project-description {
-            font-size: 15px;
-            line-height: 1.7;
-            color: #d6d6d6;
-            margin-bottom: 14px;
-        }
+    .subtitle span.separator {
+      margin: 0 8px;
+    }
 
-        .project-role {
-            font-size: 14px;
-            color: #A52B68;
-            font-weight: 500;
-            margin-bottom: 4px;
-        }
+    .role {
+      font-size: 18px;
+      margin-bottom: 18px;
+      color: #a52b68;
+    }
 
-        .project-meta {
-            font-size: 13px;
-            color: #999;
-        }
+    .about {
+      font-size: 15px;
+      line-height: 1.8;
+      color: #e3e3e3;
+    }
 
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            margin-top: 14px;
-            font-size: 14px;
-            color: #F9F6D5;
-            text-decoration: none;
-            border-bottom: 1px solid transparent;
-            padding-bottom: 2px;
-            transition: 0.25s;
-        }
+    .about strong {
+      color: #f9f6d5;
+      font-weight: 500;
+    }
 
-        .project-link span {
-            margin-left: 6px;
-            font-size: 13px;
-        }
+    /* SEZIONI DI ANCORAGGIO */
 
-        .project-link:hover {
-            color: #5BA5C4;
-            border-bottom-color: #5BA5C4;
-        }
+    section {
+      padding: 100px 7vw 80px;
+    }
 
-        /* RESPONSIVE */
-        @media (max-width: 860px) {
-            .project-card {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    .section-title {
+      font-family: "Playfair Display", serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
 
-            .project-thumb {
-                width: 70%;
-                max-width: 260px;
-            }
-        }
+    .section-text {
+      max-width: 620px;
+      font-size: 15px;
+      line-height: 1.8;
+      color: #d7d7d7;
+    }
 
-        @media (max-width: 600px) {
-            nav {
-                justify-content: center;
-                padding: 16px 20px;
-            }
+    /* RESPONSIVE */
 
-            nav a {
-                margin-left: 18px;
-                font-size: 14px;
-            }
+    @media (max-width: 992px) {
+      nav {
+        justify-content: center;
+        padding: 16px 20px;
+        gap: 24px;
+      }
 
-            main {
-                margin-top: 100px;
-                padding: 0 18px 30px;
-            }
+      .hero {
+        flex-direction: column;
+        align-items: center;
+        padding: 110px 7vw 60px;
+      }
 
-            h1 {
-                font-size: 32px;
-            }
+      .left,
+      .right {
+        flex: 0 0 auto;
+        width: 70%;
+      }
 
-            .intro {
-                font-size: 14px;
-            }
-        }
-    </style>
+      .center {
+        order: -1;
+        text-align: left;
+        max-width: 100%;
+      }
+
+      .name {
+        font-size: 42px;
+      }
+
+      .subtitle {
+        font-size: 13px;
+        letter-spacing: 0.16em;
+        white-space: normal;
+      }
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        gap: 16px;
+        font-size: 13px;
+      }
+
+      .hero {
+        padding-top: 100px;
+        gap: 32px;
+      }
+
+      .left,
+      .right {
+        width: 85%;
+      }
+
+      .name {
+        font-size: 34px;
+      }
+    }
+  </style>
 </head>
+
 <body>
+  <!-- MENU -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#about">About</a>
+    <a href="portfolio.html">Portfolio</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-    <!-- NAV -->
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+  <!-- HERO -->
+  <main class="hero" id="home">
+    <!-- FOTO SINISTRA -->
+    <div class="left">
+      <img src="sami.jpg" alt="Samanta Bua" />
+    </div>
 
-    <main>
-        <h1>Portfolio</h1>
-        <p class="intro">
-            Una selezione di progetti curati in ambito editoriale, brand identity e comunicazione visiva.
-            Ogni lavoro è stato seguito con attenzione al dettaglio, coerenza visiva e rispetto del contesto
-            del cliente.
-        </p>
+    <!-- TESTO CENTRALE -->
+    <div class="center">
+      <h1 class="name">Samanta Bua</h1>
 
-        <section class="projects-list">
+      <div class="subtitle">
+        <span>Graphic Designer</span>
+        <span class="separator">•</span>
+        <span>Content Creator</span>
+        <span class="separator">•</span>
+        <span>Social Media Manager</span>
+      </div>
 
-            <!-- PROGETTO 1 – DENTAL TRIBUNE -->
-            <article class="project-card">
-                <div class="project-thumb">
-                    <a href="progetto-dental-tribune.html">
-                        <img src="dental-tribune-thumb.jpg"
-                             alt="Anteprima progetto editoriale Dental Tribune per RESISTA">
-                    </a>
-                </div>
+      <p class="about">
+        Sono una <strong>graphic designer</strong> specializzata in brand identity,
+        progettazione grafica per stampa e digitale e content creation. Lavoro con
+        uno stile pulito, elegante e coerente, trasformando idee in progetti visivi
+        chiari e leggibili, nel rispetto dell’identità del brand.
+      </p>
+    </div>
 
-                <div class="project-content">
-                    <h2 class="project-title">Dental Tribune – Progetto editoriale per RESISTA</h2>
-                    <p class="project-subtitle">Articolo impaginato per la rivista internazionale Dental Tribune</p>
+    <!-- FOTO DESTRA -->
+    <div class="right">
+      <img
+        src="christin-hume-hBuwVLcYTnA-unsplash.jpg"
+        alt="Dettaglio di mani che lavorano al laptop"
+      />
+    </div>
+  </main>
 
-                    <p class="project-description">
-                        Progetto editoriale realizzato per <strong>RESISTA</strong>, azienda di implantologia dentale.
-                        Ho curato la progettazione grafica e l’impaginazione di un articolo tecnico destinato alla
-                        pubblicazione sulla rivista internazionale <em>Dental Tribune</em>, lavorando su gerarchia
-                        visiva, leggibilità e coerenza con l’immagine istituzionale del brand.
-                    </p>
+  <!-- ABOUT (ancora molto breve, solo per avere l’ancora funzionante) -->
+  <section id="about">
+    <h2 class="section-title">About</h2>
+    <p class="section-text">
+      Lavoro attualmente come graphic designer per <strong>RESISTA Oral Implant Solutions</strong>,
+      nel settore dell’implantologia dentale. Mi occupo di grafica editoriale, materiali
+      promozionali, contenuti digitali e supporto alla comunicazione del brand.
+    </p>
+  </section>
 
-                    <p class="project-role">Ruolo</p>
-                    <p class="project-meta">
-                        Art direction grafica • Impaginazione editoriale • Preparazione file per la stampa e la pubblicazione digitale
-                    </p>
-
-                    <a class="project-link" href="progetto-dental-tribune.html">
-                        Vedi il progetto
-                        <span>↗</span>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Qui in futuro potremo aggiungere altri progetti, con la stessa struttura -->
-
-        </section>
-    </main>
-
+  <!-- CONTACT (placeholder) -->
+  <section id="contact">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-text">
+      Per collaborazioni o richieste:
+      <a href="mailto:samanta.bua@email.it">samanta.bua@email.it</a>
+    </p>
+  </section>
 </body>
 </html>

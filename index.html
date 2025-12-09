@@ -31,7 +31,7 @@
             left: 0;
             padding: 25px 50px;
             display: flex;
-            justify-content: flex-start; /* allineato a sinistra */
+            justify-content: flex-start;
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(6px);
             z-index: 1000;
@@ -82,7 +82,7 @@
         .center {
             width: 34%;
             padding: 0 40px;
-            text-align: left; /* 🔥 IMPORTANTISSIMO */
+            text-align: left !important;
         }
 
         .name {
@@ -92,7 +92,7 @@
             margin-bottom: 15px;
             color: #F9F6D5;
             line-height: 1.1;
-            text-align: left; /* 🔥 */
+            text-align: left !important;
         }
 
         .subtitle {
@@ -101,7 +101,7 @@
             color: #5BA5C4;
             margin-bottom: 30px;
             letter-spacing: 1px;
-            text-align: left; /* 🔥 */
+            text-align: left !important;
         }
 
         .about {
@@ -109,7 +109,7 @@
             line-height: 1.7;
             color: #cfcfcf;
             max-width: 450px;
-            text-align: left; /* 🔥 */
+            text-align: left !important;
         }
 
         /* FOTO A DESTRA */
@@ -140,17 +140,19 @@
 
             .center {
                 padding: 40px 0;
-                text-align: center !important; /* Mobile = centrato */
             }
 
             .name {
                 font-size: 48px;
-                text-align: center;
+                text-align: center !important;
             }
 
-            .subtitle,
+            .subtitle {
+                text-align: center !important;
+            }
+
             .about {
-                text-align: center;
+                text-align: center !important;
             }
         }
     </style>

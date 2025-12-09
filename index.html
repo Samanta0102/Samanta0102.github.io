@@ -3,133 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samanta Bua • Portfolio</title>
-
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Samanta Bua – Portfolio</title>
 
     <style>
         body {
             margin: 0;
-            padding: 0;
-            background: #000;
+            font-family: Arial, sans-serif;
+            background-color: #000;
             color: #fff;
-            font-family: "Inter", sans-serif;
         }
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 60px 25px;
+        /* ----- HERO FULL WIDTH ----- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
         }
 
-        h1, h2 {
-            font-family: "Playfair Display", serif;
+        .hero img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(45%);
         }
 
-        h1 {
-            font-size: 42px;
-            font-weight: 600;
-            margin-bottom: 15px;
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            max-width: 800px;
         }
 
-        h2 {
-            font-size: 28px;
-            margin-top: 60px;
+        .hero-text h1 {
+            font-size: 3.5rem;
+            font-family: "Georgia", serif;
+            margin-bottom: 10px;
         }
 
-        p {
-            font-size: 18px;
-            color: #e4e4e4;
+        .hero-text p {
+            font-size: 1.3rem;
             line-height: 1.6;
+            color: #e6e6e6;
         }
 
         .gold {
-            color: #d4af37;
+            color: #c1a875;
+            font-weight: bold;
         }
 
-        .divider {
-            height: 1px;
-            width: 60px;
-            background: #d4af37;
-            margin: 25px 0;
-        }
+        /* ----- SEZIONE CHI SONO ----- */
+        s
 
-        /* SEZIONE CON FOTO */
-        .about-section {
-            display: flex;
-            align-items: flex-start;
-            gap: 40px;
-            margin-top: 20px;
-        }
-
-        .about-text {
-            flex: 1;
-        }
-
-        .about-photo {
-            width: 330px;
-            height: auto;
-            border: 1px solid #d4af37;
-            border-radius: 4px;
-            object-fit: cover;
-        }
-
-        @media(max-width: 800px) {
-            .about-section {
-                flex-direction: column;
-            }
-            .about-photo {
-                width: 100%;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-    <div class="container">
-
-        <h1>Ciao, sono Samanta</h1>
-        <p class="gold">Graphic Designer • Content Creation • Social Media</p>
-
-        <div class="divider"></div>
-
-        <h2>Chi sono</h2>
-
-        <div class="about-section">
-            
-            <!-- TESTO -->
-            <div class="about-text">
-                <p>
-                    Sono una graphic designer specializzata in brand identity, progettazione grafica per stampa e digital,
-                    content creation e gestione social media.  
-                    Mi occupo di trasformare idee in visual coerenti, eleganti e funzionali, curando ogni fase del processo:
-                    concept, layout, produzione contenuti, file esecutivi e preparazione per la stampa.
-                </p>
-
-                <p>
-                    Ho esperienza sia nel settore medico/dentale che in quello 
-                    <span class="gold">food & hospitality</span>, inclusi progetti internazionali.  
-                    Lavoro con grande attenzione ai dettagli, estetica e coerenza visiva, creando materiali che rispecchiano
-                    identità, valori e tono di voce dei brand.
-                </p>
-
-                <p><i>Portfolio in arrivo — sto selezionando i progetti migliori ✨</i></p>
-            </div>
-
-            <!-- FOTO -->
-            <img src="foto-samanta.jpg" alt="Samanta Bua" class="about-photo">
-
-        </div>
-
-        <div class="divider"></div>
-
-        <h2>Contatti</h2>
-        <p>Email: <a href="mailto:sami22misa@gmail.com" style="color:#d4af37;">sami22misa@gmail.com</a></p>
-        <p>LinkedIn: <span style="color:#888;">in aggiornamento</span></p>
-
-    </div>
-
-</body>
-</html>

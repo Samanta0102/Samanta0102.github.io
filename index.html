@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samanta Bua – Graphic Designer</title>
 
-    <!-- FONT per il nome (editoriale) -->
-    <link href="https://fonts.googleapis.com/css2?family:Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FONT Serif elegante per il nome -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- FONT calligrafico per la firma -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-    <!-- FONT elegante minimal per testi -->
+    <!-- FONT sans serif minimal per testi -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
@@ -19,21 +19,49 @@
             margin: 0;
             padding: 0;
             background: #000;
-            color: #fff;
+            color: white;
             font-family: 'Inter', sans-serif;
         }
 
+        /* MENU */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: flex-end;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 40px;
+            font-size: 16px;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #d9b26f;
+        }
+
+        /* CONTAINER */
         .container {
             display: flex;
             flex-direction: row;
             align-items: center;
             width: 100%;
             min-height: 100vh;
-            padding: 60px;
+            padding: 120px 60px 60px;
             box-sizing: border-box;
         }
 
-        /* FOTO A SINISTRA */
+        /* FOTO SINISTRA */
         .left {
             width: 45%;
             display: flex;
@@ -57,20 +85,21 @@
             font-size: 60px;
             font-weight: 600;
             margin-bottom: 10px;
+            color: #F9F6D5; /* avorio */
         }
 
         .signature {
             font-family: 'Great Vibes', cursive;
             font-size: 38px;
             margin-top: -15px;
-            color: #d9b26f;
+            color: #5BA5C4; /* azzurro polvere */
         }
 
         .role {
             font-size: 20px;
             margin: 25px 0;
             letter-spacing: 1px;
-            color: #d4d4d4;
+            color: #A52B68; /* rosa prugna */
         }
 
         .about {
@@ -94,57 +123,17 @@
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
+
+            nav {
+                justify-content: center;
+            }
+
+            nav a {
+                margin-left: 20px;
+                font-size: 14px;
+            }
+
             .container {
-                flex-direction: column;
-                text-align: center;
-                padding: 40px;
-            }
+                flex-direction: c
 
-            .left, .center, .right {
-                width: 100%;
-            }
-
-            .right img, .left img {
-                width: 70%;
-                margin-bottom: 30px;
-            }
-
-            .center {
-                padding-left: 0;
-            }
-        }
-    </style>
-</head>
-
-<body>
-
-<div class="container">
-
-    <!-- FOTO TUA -->
-    <div class="left">
-        <img src="sami.jpg" alt="Samanta Bua">
-    </div>
-
-    <!-- TESTO CENTRALE -->
-    <div class="center">
-        <div class="name">Samanta Bua</div>
-        <div class="signature">Samanta</div>
-        <div class="role">Graphic Designer</div>
-
-        <div class="about">
-            Sono una graphic designer specializzata in brand identity, progettazione grafica
-            e content creation. Lavoro con uno stile pulito, elegante e coerente, trasformando
-            idee in progetti visivi dal forte impatto estetico.
-        </div>
-    </div>
-
-    <!-- FOTO UNSPLASH -->
-    <div class="right">
-        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Portfolio Image">
-    </div>
-
-</div>
-
-</body>
-</html>
 

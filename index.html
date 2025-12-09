@@ -1,123 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samanta Bua – Graphic Designer</title>
+    <title>Samanta Bua • Portfolio</title>
+
+    <!-- FONT E STILE -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
     <style>
         body {
-            font-family: "Georgia", serif;
             margin: 0;
             padding: 0;
-            background: #faf7f2;
-            color: #222;
+            background: #000;
+            color: #fff;
+            font-family: "Inter", sans-serif;
             line-height: 1.6;
         }
 
-        header {
-            padding: 60px;
-            text-align: center;
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 60px 25px;
+        }
+
+        h1, h2 {
+            font-family: "Playfair Display", serif;
+            margin-bottom: 15px;
         }
 
         h1 {
             font-size: 42px;
             font-weight: 600;
-            margin-bottom: 10px;
         }
 
         h2 {
             font-size: 28px;
-            margin-top: 50px;
-            text-align: center;
+            margin-top: 60px;
         }
 
         p {
             font-size: 18px;
-            max-width: 700px;
-            margin: 0 auto 20px;
-            text-align: center;
+            color: #e4e4e4;
         }
 
-        .photo {
-            width: 200px;
-            height: auto;
-            border-radius: 12px;
-            display: block;
-            margin: 30px auto;
+        .gold {
+            color: #d4af37;
         }
 
-        section {
-            margin: 60px 20px;
-        }
-
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 26px;
-            border: 1px solid #000;
-            text-decoration: none;
-            color: #000;
-            border-radius: 4px;
-            transition: 0.2s;
-        }
-
-        .button:hover {
-            background: #000;
-            color: #fff;
-        }
-
-        footer {
-            margin-top: 80px;
-            text-align: center;
-            padding: 20px;
-            font-size: 14px;
-            opacity: 0.7;
+        .divider {
+            height: 1px;
+            width: 60px;
+            background: #d4af37;
+            margin: 25px 0;
         }
     </style>
 </head>
 
 <body>
 
-<header>
-    <img src="FOTO_SAMANTA.jpg" alt="Samanta Bua" class="photo">
-    <h1>Ciao, sono Samanta 💛</h1>
-    <p>Graphic Designer con esperienza in stampa, brand identity e content creation per i social media.<br>
-       Sto costruendo il mio portfolio — torna presto per vedere nuovi progetti!</p>
-</header>
+    <div class="container">
 
-<section>
-    <h2>Competenze</h2>
-    <p>Graphic Design • Brand Identity • Content Creation • Social Media Management<br>
-       Pre-press • Gestione fornitori • Marketing Asset Management</p>
+        <!-- INTRO -->
+        <h1>Ciao, sono Samanta</h1>
+        <p class="gold">Graphic Designer • Content Creation • Social Media</p>
 
-    <p><strong>Software:</strong><br>
-       Adobe Photoshop • Illustrator • InDesign • After Effects<br>
-       Figma • Canva • PerfectVideo</p>
-</section>
+        <div class="divider"></div>
 
-<section>
-    <h2>Portfolio</h2>
-    <p>Questa sezione è in costruzione.<br>
-       Presto caricherò progetti di stampa, branding e social media. ✨</p>
-    <a href="#" class="button">Torna più tardi</a>
-</section>
+        <!-- PROFESSIONAL ABOUT -->
+        <h2>Chi sono</h2>
+        <p>
+            Sono una graphic designer specializzata in brand identity, progettazione grafica per stampa e digital,
+            content creation e gestione social media.  
+            Mi occupo di trasformare idee in visual coerenti, eleganti e funzionali, curando ogni fase: concept,
+            layout, produzione contenuti, file esecutivi e preparazione per la stampa.
+        </p>
 
-<section>
-    <h2>Esperienze</h2>
-    <p>Graphic Designer & Social Media Manager presso RESISTA (2024 – attuale)<br>
-       Graphic Designer per hotel e ristorazione in Svizzera 🇨🇭<br>
-       Rendering & Social Media Manager presso Colorificio VR</p>
-</section>
+        <p>
+            Ho esperienza sia nel settore medico/dentale che in quello <span class="gold">food & hospitality</span>, 
+            inclusi progetti internazionali.  
+            Lavoro con grande attenzione ai dettagli, estetica e coerenza visiva, creando materiali che rispecchiano
+            identità, valori e tono di voce dei brand.
+        </p>
 
-<section>
-    <h2>Contatti</h2>
-    <p>Email: <a href="mailto:sami22misa@gmail.com">sami22misa@gmail.com</a><br>
-       LinkedIn: presto online</p>
-</section>
+        <p><i>Portfolio in arrivo — sto selezionando i progetti migliori ✨</i></p>
 
-<footer>
-    © 2025 – Designed & coded by Samanta Bua
-</footer>
+        <div class="divider"></div>
+
+        <!-- CONTATTI -->
+        <h2>Contatti</h2>
+        <p>Email: <a href="mailto:sami22misa@gmail.com" style="color:#d4af37;">sami22misa@gmail.com</a></p>
+        <p>LinkedIn: <span style="color:#888;">in aggiornamento</span></p>
+
+    </div>
 
 </body>
 </html>

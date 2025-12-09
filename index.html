@@ -1,59 +1,87 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samanta Bua – Portfolio</title>
+<!-- HEADER ELEGANTE CON FOTO A SINISTRA -->
+<section class="hero">
+  <div class="hero-container">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #000;
-            color: #fff;
-        }
+    <!-- FOTO -->
+    <div class="hero-image">
+      <img src="FOTO.jpg" alt="Samanta Bua">
+    </div>
 
-        /* ----- HERO FULL WIDTH ----- */
-        .hero {
-            position: relative;
-            width: 100%;
-            height: 100vh;
-            overflow: hidden;
-        }
+    <!-- TESTO -->
+    <div class="hero-text">
+      <h1 class="hero-name">SAMANTA BUA</h1>
+      <h2 class="hero-roles">Graphic Designer • Content Creation • Social Media</h2>
 
-        .hero img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(45%);
-        }
+      <p class="hero-description">
+        Graphic designer specializzata in brand identity, progettazione grafica per stampa e digitale,
+        content creation e gestione social media. Creo materiali visivi eleganti, funzionali e coerenti
+        con l’identità dei brand.
+      </p>
+    </div>
 
-        .hero-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            text-align: center;
-            max-width: 800px;
-        }
+  </div>
+</section>
 
-        .hero-text h1 {
-            font-size: 3.5rem;
-            font-family: "Georgia", serif;
-            margin-bottom: 10px;
-        }
+<!-- STILI -->
+<style>
+  body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+    font-family: "Didot", "Playfair Display", serif;
+    color: #fff;
+  }
 
-        .hero-text p {
-            font-size: 1.3rem;
-            line-height: 1.6;
-            color: #e6e6e6;
-        }
+  .hero {
+    padding: 60px 50px;
+  }
 
-        .gold {
-            color: #c1a875;
-            font-weight: bold;
-        }
+  .hero-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
 
-        /* ----- SEZIONE CHI SONO ----- */
-        s
+  .hero-image img {
+    width: 430px;
+    border-radius: 4px;
+    object-fit: cover;
+  }
+
+  .hero-name {
+    font-size: 68px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    margin: 0;
+  }
+
+  .hero-roles {
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: #d4af37; /* oro elegante */
+    margin: 10px 0 30px;
+    font-weight: 300;
+  }
+
+  .hero-description {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: "Georgia", serif;
+    opacity: 0.9;
+  }
+
+  @media (max-width: 900px) {
+    .hero-container {
+      flex-direction: column;
+      text-align: center;
+    }
+    .hero-image img {
+      width: 80%;
+    }
+    .hero-name {
+      font-size: 48px;
+    }
+  }
+</style>
 

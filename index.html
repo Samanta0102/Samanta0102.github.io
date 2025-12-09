@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samanta Bua – Graphic Designer</title>
 
-    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -45,42 +44,41 @@
             color: #5BA5C4;
         }
 
-        /* LAYOUT 3 COLONNE */
+        /* LAYOUT PRINCIPALE */
         .wrapper {
-            max-width: 1300px;             /* più stretto = tutto più centrato */
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 120px 40px 60px;
+            padding: 130px 50px;
             display: flex;
-            justify-content: center;
             align-items: center;
-            gap: 32px;                     /* meno spazio tra le colonne */
-            box-sizing: border-box;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .left, .center, .right {
+            flex: 1;
         }
 
         /* FOTO SINISTRA */
-        .left {
-            width: 24%;                    /* leggermente più piccola */
-        }
-
         .left img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
+            border-radius: 14px;
             object-fit: cover;
-            display: block;
         }
 
         /* TESTO CENTRALE */
         .center {
-            width: 46%;                    /* più larga: blocco testo più centrale */
+            max-width: 500px;
         }
 
         .name {
             font-family: 'Playfair Display', serif;
-            font-size: 64px;
+            font-size: 62px;
             font-weight: 600;
             margin-bottom: 10px;
             color: #F9F6D5;
+            text-align: left; /* IMPORTANTE */
         }
 
         .roles {
@@ -88,56 +86,39 @@
             line-height: 1.6;
             color: #5BA5C4;
             margin-bottom: 25px;
+            text-align: left; /* IMPORTANTE */
         }
 
         .about {
-            font-size: 16px;
+            font-size: 17px;
             line-height: 1.7;
             color: #e0e0e0;
+            text-align: left; /* IMPORTANTE */
         }
 
         /* FOTO DESTRA */
-        .right {
-            width: 30%;                    /* un filo più grande della sinistra */
-        }
-
         .right img {
             width: 100%;
             height: auto;
-            border-radius: 12px;
+            border-radius: 14px;
             object-fit: cover;
-            display: block;
         }
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
-            nav {
-                justify-content: center;
-            }
-
-            nav a {
-                margin-left: 20px;
-                font-size: 14px;
-            }
-
             .wrapper {
                 flex-direction: column;
-                text-align: center;
-                padding: 110px 20px 40px;
-            }
-
-            .left,
-            .center,
-            .right {
-                width: 100%;
+                padding: 120px 20px;
+                gap: 40px;
             }
 
             .name {
-                font-size: 40px;
+                font-size: 42px;
+                text-align: center;
             }
 
-            .roles {
-                font-size: 18px;
+            .roles, .about {
+                text-align: center;
             }
         }
     </style>
@@ -153,15 +134,13 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- HERO -->
+    <!-- CONTENUTO -->
     <div class="wrapper">
 
-        <!-- FOTO SINISTRA -->
         <div class="left">
             <img src="sami.jpg" alt="Samanta Bua">
         </div>
 
-        <!-- TESTO CENTRALE -->
         <div class="center">
             <div class="name">Samanta Bua</div>
 
@@ -170,12 +149,13 @@
             </div>
 
             <div class="about">
-                Sono una graphic designer specializzata in brand identity, progettazione grafica e content creation.
-                Lavoro con uno stile pulito, elegante e coerente, trasformando idee in progetti visivi dal forte impatto estetico.
+                Sono una graphic designer specializzata in brand identity,
+                progettazione grafica e content creation.  
+                Lavoro con uno stile pulito, elegante e coerente,
+                trasformando idee in progetti visivi dal forte impatto estetico.
             </div>
         </div>
 
-        <!-- FOTO DESTRA -->
         <div class="right">
             <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Work Image">
         </div>

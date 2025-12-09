@@ -1,108 +1,150 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Samanta Bua – Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Samanta Bua – Graphic Designer</title>
 
-    <!-- Google Font: Firma calligrafica -->
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+    <!-- FONT per il nome (editoriale) -->
+    <link href="https://fonts.googleapis.com/css2?family:Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Google Font elegante serif -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FONT calligrafico per la firma -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    <!-- FONT elegante minimal per testi -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: white;
-            font-family: "Playfair Display", serif;
+            background: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
         }
 
-        .hero {
+        .container {
             display: flex;
+            flex-direction: row;
             align-items: center;
+            width: 100%;
+            min-height: 100vh;
+            padding: 60px;
+            box-sizing: border-box;
+        }
+
+        /* FOTO A SINISTRA */
+        .left {
+            width: 45%;
+            display: flex;
             justify-content: center;
-            padding: 80px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
-        /* FOTO SOFT, ELEGANTE */
-        .hero-image img {
-            width: 380px;
+        .left img {
+            width: 85%;
             border-radius: 10px;
-            opacity: 0.28; /* foto resa delicata */
-            filter: grayscale(20%);
-            margin-right: 50px;
+            opacity: 0.85;
         }
 
-        /* TESTO */
-        .hero-text {
-            max-width: 600px;
+        /* TESTO CENTRALE */
+        .center {
+            width: 35%;
+            padding-left: 40px;
         }
 
-        .hero-name {
-            font-size: 55px;
-            margin: 0;
-            letter-spacing: 2px;
+        .name {
+            font-family: 'Playfair Display', serif;
+            font-size: 60px;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
 
-        /* FIRMA CALLIGRAFICA ELEGANTE */
         .signature {
-            font-family: "Dancing Script", cursive;
-            font-size: 40px;
-            color: #d4b26a;
-            margin-top: -10px;
-            margin-bottom: 25px;
-            opacity: 0.9;
+            font-family: 'Great Vibes', cursive;
+            font-size: 38px;
+            margin-top: -15px;
+            color: #d9b26f;
         }
 
-        .hero-roles {
+        .role {
             font-size: 20px;
-            margin: 0;
-            margin-bottom: 25px;
-            color: #d4b26a;
+            margin: 25px 0;
+            letter-spacing: 1px;
+            color: #d4d4d4;
         }
 
-        .hero-description {
-            line-height: 1.6;
-            font-size: 18px;
-            opacity: 0.9;
+        .about {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #cfcfcf;
+            max-width: 420px;
+        }
+
+        /* FOTO DESTRA */
+        .right {
+            width: 40%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .right img {
+            width: 90%;
+            border-radius: 10px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+                padding: 40px;
+            }
+
+            .left, .center, .right {
+                width: 100%;
+            }
+
+            .right img, .left img {
+                width: 70%;
+                margin-bottom: 30px;
+            }
+
+            .center {
+                padding-left: 0;
+            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HERO ELEGANTE -->
-    <section class="hero">
+<div class="container">
 
-        <!-- FOTO -->
-        <div class="hero-image">
-            <img src="sami.jpg" alt="Samanta Bua">
+    <!-- FOTO TUA -->
+    <div class="left">
+        <img src="sami.jpg" alt="Samanta Bua">
+    </div>
+
+    <!-- TESTO CENTRALE -->
+    <div class="center">
+        <div class="name">Samanta Bua</div>
+        <div class="signature">Samanta</div>
+        <div class="role">Graphic Designer</div>
+
+        <div class="about">
+            Sono una graphic designer specializzata in brand identity, progettazione grafica
+            e content creation. Lavoro con uno stile pulito, elegante e coerente, trasformando
+            idee in progetti visivi dal forte impatto estetico.
         </div>
+    </div>
 
-        <!-- TESTO -->
-        <div class="hero-text">
-            <h1 class="hero-name">SAMANTA BUA</h1>
+    <!-- FOTO UNSPLASH -->
+    <div class="right">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Portfolio Image">
+    </div>
 
-            <!-- Firma calligrafica -->
-            <div class="signature">Samanta</div>
-
-            <h2 class="hero-roles">
-                Graphic Designer • Content Creation • Social Media
-            </h2>
-
-            <p class="hero-description">
-                Graphic designer specializzata in brand identity, progettazione grafica per
-                stampa e digitale, content creation e gestione social media. Creo materiali
-                visivi eleganti, puliti e coerenti con l’identità dei brand.
-            </p>
-        </div>
-
-    </section>
+</div>
 
 </body>
 </html>
+

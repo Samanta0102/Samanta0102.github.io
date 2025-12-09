@@ -1,206 +1,27 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio – Samanta Bua</title>
+<a href="progetto-dental-tribune.html" class="project-card">
+  <div class="project-thumb-wrapper">
+    <img
+      src="dental-tribune-thumb.jpg"
+      alt="Copertina del progetto editoriale Dental Tribune"
+      class="project-thumb"
+    />
+  </div>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <h2 class="project-title">Dental Tribune – Progetto editoriale</h2>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <div class="project-meta">
+    editoriale · impaginazione · settore odontoiatrico
+  </div>
 
-    body {
-      background: #000;
-      color: #f9f6d5;
-      font-family: "Inter", sans-serif;
-    }
+  <p class="project-desc">
+    Progetto di grafica editoriale e impaginazione realizzato per
+    <strong>RESISTA — ING. Carlo Alberto Issoglio &amp; C. S.R.L.</strong>
+    e pubblicato sulla rivista internazionale 
+    <em>Dental Tribune</em>, in occasione dell’evento AEEDC Dubai 2025.
+  </p>
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px 60px;
-      display: flex;
-      justify-content: flex-start;
-      gap: 40px;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(6px);
-      z-index: 1000;
-    }
-
-    nav a {
-      font-size: 15px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #f9f6d5;
-      opacity: 0.9;
-      transition: color 0.25s ease, opacity 0.25s ease;
-    }
-
-    nav a:hover {
-      color: #5ba5c4;
-      opacity: 1;
-    }
-
-    .wrapper {
-      padding: 120px 7vw 80px;
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .page-title {
-      font-family: "Playfair Display", serif;
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
-
-    .page-subtitle {
-      color: #c7c7c7;
-      font-size: 15px;
-      margin-bottom: 32px;
-    }
-
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 32px;
-    }
-
-    .project-card {
-      background: #050505;
-      border-radius: 18px;
-      padding: 18px 18px 22px;
-      border: 1px solid rgba(249, 246, 213, 0.08);
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
-      transition: transform 0.25s ease, box-shadow 0.25s ease,
-        border-color 0.25s ease;
-    }
-
-    .project-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(90, 165, 196, 0.6);
-      box-shadow: 0 22px 55px rgba(0, 0, 0, 0.9);
-    }
-
-    .project-thumb-wrapper {
-      width: 100%;
-      border-radius: 14px;
-      overflow: hidden;
-      margin-bottom: 16px;
-    }
-
-    .project-thumb {
-      width: 100%;
-      display: block;
-      height: 210px; /* immagine più piccola, metà di prima circa */
-      object-fit: cover;
-    }
-
-    .project-title {
-      font-family: "Playfair Display", serif;
-      font-size: 20px;
-      margin-bottom: 4px;
-    }
-
-    .project-meta {
-      font-size: 13px;
-      color: #5ba5c4;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      margin-bottom: 10px;
-    }
-
-    .project-desc {
-      font-size: 14px;
-      color: #d9d9d9;
-      line-height: 1.7;
-      margin-bottom: 14px;
-    }
-
-    .project-link {
-      font-size: 14px;
-      color: #f9f6d5;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .project-link span.icon {
-      font-size: 16px;
-      color: #5ba5c4;
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        justify-content: center;
-        padding: 16px 20px;
-        gap: 18px;
-      }
-
-      .wrapper {
-        padding: 110px 6vw 60px;
-      }
-
-      .page-title {
-        font-size: 32px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
-
-  <main class="wrapper">
-    <h1 class="page-title">Portfolio</h1>
-    <p class="page-subtitle">
-      Una selezione di progetti curati in ambito editoriale, branding e
-      comunicazione visiva.
-    </p>
-
-    <section class="projects-grid">
-      <!-- PROGETTO 1 – DENTAL TRIBUNE -->
-      <a href="progetto-dental-tribune.html" class="project-card">
-        <div class="project-thumb-wrapper">
-          <img
-            src="dental-tribune-thumb.jpg"
-            alt="Copertina del progetto editoriale Dental Tribune"
-            class="project-thumb"
-          />
-        </div>
-
-        <h2 class="project-title">Dental Tribune – Progetto editoriale</h2>
-        <div class="project-meta">editoriale · impaginazione · settore medicale</div>
-        <p class="project-desc">
-          Progetto di grafica editoriale e impaginazione realizzato per RESISTA
-          Oral Implant Solutions e pubblicato sulla rivista internazionale
-          <em>Dental Tribune</em>, in occasione dell’evento AEEDC Dubai 2025.
-        </p>
-
-        <div class="project-link">
-          <span>Apri il case study</span>
-          <span class="icon">↗</span>
-        </div>
-      </a>
-
-      <!-- Qui in futuro aggiungeremo gli altri progetti, mantenendo lo stesso layout -->
-    </section>
-  </main>
-</body>
-</html>
+  <div class="project-link">
+    <span>Apri il case study</span>
+    <span class="icon">↗</span>
+  </div>
+</a>

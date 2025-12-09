@@ -47,18 +47,19 @@
 
         /* LAYOUT 3 COLONNE */
         .wrapper {
-            max-width: 1600px;
+            max-width: 1400px;        /* più stretto = tutto più centrato */
             margin: 0 auto;
-            padding-top: 120px;
+            padding: 120px 40px 60px; /* un po’ di respiro ai lati */
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            gap: 40px;
+            gap: 48px;
+            box-sizing: border-box;
         }
 
         /* FOTO SINISTRA */
         .left {
-            width: 32%;
+            width: 28%;
         }
 
         .left img {
@@ -66,11 +67,12 @@
             height: auto;
             border-radius: 12px;
             object-fit: cover;
+            display: block;
         }
 
         /* TESTO CENTRALE */
         .center {
-            width: 36%;
+            width: 44%;     /* più larga, il titolo rientra visivamente al centro */
         }
 
         .name {
@@ -96,7 +98,7 @@
 
         /* FOTO DESTRA */
         .right {
-            width: 32%;
+            width: 28%;
         }
 
         .right img {
@@ -104,16 +106,38 @@
             height: auto;
             border-radius: 12px;
             object-fit: cover;
+            display: block;
         }
 
+        /* RESPONSIVE */
         @media (max-width: 900px) {
+            nav {
+                justify-content: center;
+            }
+
+            nav a {
+                margin-left: 20px;
+                font-size: 14px;
+            }
+
             .wrapper {
                 flex-direction: column;
                 text-align: center;
+                padding: 110px 20px 40px;
             }
 
-            .left, .center, .right {
-                width: 90%;
+            .left,
+            .center,
+            .right {
+                width: 100%;
+            }
+
+            .name {
+                font-size: 40px;
+            }
+
+            .roles {
+                font-size: 18px;
             }
         }
     </style>
@@ -129,7 +153,7 @@
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- CONTENUTO -->
+    <!-- HERO -->
     <div class="wrapper">
 
         <!-- FOTO SINISTRA -->

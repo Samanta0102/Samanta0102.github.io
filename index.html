@@ -11,9 +11,6 @@
     <!-- FONT sans serif minimal per testi -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-    <!-- FONT azzurro calligrafico (solo per i ruoli) -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
     <style>
         body {
             margin: 0;
@@ -29,10 +26,9 @@
             position: fixed;
             top: 0;
             left: 0;
-            padding: 25px 40px; /* PIÙ A SINISTRA */
+            padding: 25px 40px;
             display: flex;
-            justify-content: flex-start; /* SPOSTA A SINISTRA */
-            gap: 40px; /* DISTANZA TRA LE VOCI */
+            justify-content: flex-start;
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(6px);
             z-index: 1000;
@@ -41,6 +37,7 @@
         nav a {
             color: #fff;
             text-decoration: none;
+            margin-right: 35px;
             font-size: 16px;
             letter-spacing: 1px;
             transition: 0.3s;
@@ -50,7 +47,7 @@
             color: #d9b26f;
         }
 
-        /* LAYOUT PRINCIPALE */
+        /* CONTAINER */
         .container {
             display: flex;
             flex-direction: row;
@@ -63,7 +60,7 @@
 
         /* FOTO SINISTRA */
         .left {
-            width: 42%;
+            width: 45%;
             display: flex;
             justify-content: center;
         }
@@ -71,12 +68,12 @@
         .left img {
             width: 85%;
             border-radius: 10px;
-            opacity: 0.9;
+            opacity: 0.90;
         }
 
         /* TESTO CENTRALE */
         .center {
-            width: 38%;
+            width: 35%;
             padding-left: 40px;
         }
 
@@ -84,23 +81,24 @@
             font-family: 'Playfair Display', serif;
             font-size: 60px;
             font-weight: 600;
-            margin-bottom: 5px;
-            color: #F9F6D5; /* avorio */
+            margin-bottom: 20px;
+            color: #F9F6D5; /* avorio elegante */
         }
 
-        /* NUOVA LINEA RUOLI */
         .roles {
-            font-family: 'Great Vibes', cursive;
-            font-size: 38px;
-            margin-bottom: 20px;
+            font-family: 'Inter', sans-serif;
+            font-size: 22px;
+            font-weight: 300;
+            margin-bottom: 25px;
+            letter-spacing: 1.5px;
             color: #5BA5C4; /* azzurro */
         }
 
-        .role {
+        .about-title {
             font-size: 20px;
-            margin: 25px 0;
-            letter-spacing: 1px;
-            color: #A52B68; /* rosa prugna */
+            color: #A52B68; /* prugna */
+            margin-top: 25px;
+            margin-bottom: 10px;
         }
 
         .about {
@@ -127,23 +125,40 @@
 
             nav {
                 justify-content: center;
-                gap: 20px;
+            }
+
+            nav a {
+                margin-right: 20px;
+                font-size: 14px;
             }
 
             .container {
                 flex-direction: column;
                 text-align: center;
-                padding-top: 160px;
+                padding-top: 140px;
             }
 
-            .left, .center, .right {
+            .left, .right {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .center {
                 width: 100%;
                 padding: 0;
             }
 
             .left img, .right img {
-                width: 70%;
-                margin: 0 auto;
+                width: 80%;
+            }
+
+            .name {
+                font-size: 48px;
+            }
+
+            .roles {
+                font-size: 18px;
             }
         }
     </style>
@@ -159,32 +174,37 @@
         <a href="#">Contatti</a>
     </nav>
 
-    <!-- SEZIONE PRINCIPALE -->
+    <!-- CONTENUTO PRINCIPALE -->
     <div class="container">
-
+        
         <!-- FOTO SINISTRA -->
         <div class="left">
             <img src="sami.jpg" alt="Samanta Bua">
         </div>
 
-        <!-- TESTO CENTRALE -->
+        <!-- TESTI -->
         <div class="center">
-            <h1 class="name">Samanta Bua</h1>
 
-            <!-- NUOVA LINEA RUOLI IN AZZURRO -->
-            <div class="roles">Graphic Designer • Content Creator • Social Media Manager</div>
+            <div class="name">Samanta Bua</div>
 
-            <div class="role">Graphic Designer</div>
+            <div class="roles">
+                Graphic Designer ✦ Content Creator ✦ Social Media Manager
+            </div>
 
-            <p class="about">
-                Sono una graphic designer specializzata in brand identity, progettazione grafica e content creation.
-                Lavoro con uno stile pulito, elegante e coerente, trasformando idee in progetti visivi dal forte impatto estetico.
-            </p>
+            <div class="about-title">Profilo</div>
+
+            <div class="about">
+                Sono una graphic designer specializzata in brand identity,
+                progettazione grafica e content creation.  
+                Lavoro con uno stile pulito, elegante e coerente,
+                trasformando idee in progetti visivi dal forte impatto estetico.
+            </div>
+
         </div>
 
-        <!-- FOTO DESTRA (UNSPLASH) -->
+        <!-- FOTO DESTRA -->
         <div class="right">
-            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1100&q=80" alt="Workspace">
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop" alt="workspace">
         </div>
 
     </div>

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samanta Bua – Portfolio</title>
+    <title>Samanta Bua – Graphic Designer</title>
 
-    <!-- FONT Serif elegante per il nome -->
+    <!-- FONT Serif elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- FONT sans serif minimal per testi -->
@@ -16,20 +16,19 @@
             margin: 0;
             padding: 0;
             background: #000;
-            color: #fff;
+            color: white;
             font-family: 'Inter', sans-serif;
         }
 
-        /* ---------------- MENU ---------------- */
+        /* MENU */
         nav {
             width: 100%;
             position: fixed;
             top: 0;
             left: 0;
-            padding: 25px 40px;
+            padding: 25px 35px;
             display: flex;
             justify-content: flex-start;
-            gap: 35px;
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(6px);
             z-index: 1000;
@@ -38,16 +37,17 @@
         nav a {
             color: #fff;
             text-decoration: none;
+            margin-right: 30px;
             font-size: 16px;
             letter-spacing: 1px;
-            transition: 0.3s ease;
+            transition: 0.3s;
         }
 
         nav a:hover {
             color: #d9b26f;
         }
 
-        /* ---------------- LAYOUT ---------------- */
+        /* CONTAINER */
         .container {
             display: flex;
             flex-direction: row;
@@ -60,7 +60,7 @@
 
         /* FOTO SINISTRA */
         .left {
-            width: 40%;
+            width: 45%;
             display: flex;
             justify-content: center;
         }
@@ -79,18 +79,19 @@
 
         .name {
             font-family: 'Playfair Display', serif;
-            font-size: 60px;
+            font-size: 58px;
             font-weight: 600;
-            margin-bottom: 20px;
-            color: #F9F6D5; /* avorio */
+            margin-bottom: 15px;
+            color: #F9F6D5;
         }
 
-        .roles {
-            color: #5BA5C4; /* azzurro polvere */
-            font-size: 22px;
-            margin-bottom: 30px;
+        /* NUOVO SOTTOTITOLO: tutto su una riga */
+        .subtitle {
+            font-size: 18px;
+            color: #5BA5C4;
             letter-spacing: 1px;
-            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 25px;
         }
 
         .about {
@@ -98,7 +99,6 @@
             line-height: 1.7;
             color: #cfcfcf;
             max-width: 420px;
-            margin-top: 25px;
         }
 
         /* FOTO DESTRA */
@@ -113,29 +113,31 @@
             border-radius: 10px;
         }
 
-        /* ---------------- RESPONSIVE ---------------- */
+        /* RESPONSIVE */
         @media (max-width: 900px) {
+
             nav {
                 justify-content: center;
+            }
+
+            nav a {
+                margin-right: 15px;
+                font-size: 13px;
             }
 
             .container {
                 flex-direction: column;
                 text-align: center;
-                padding-top: 140px;
             }
 
             .left, .center, .right {
                 width: 100%;
+                padding: 0;
             }
 
-            .center {
-                padding-left: 0;
-            }
-
-            .right img, .left img {
-                width: 75%;
-                margin-top: 30px;
+            .left img, .right img {
+                width: 70%;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -148,38 +150,36 @@
         <a href="#">Home</a>
         <a href="#">About</a>
         <a href="#">Portfolio</a>
-        <a href="#">Contatti</a>
+        <a href="#">Contact</a>
     </nav>
 
-    <!-- CONTENUTO PRINCIPALE -->
-    <section class="container">
+    <!-- SEZIONE PRINCIPALE -->
+    <div class="container">
 
-        <!-- FOTO A SINISTRA -->
+        <!-- FOTO SINISTRA -->
         <div class="left">
             <img src="sami.jpg" alt="Samanta Bua">
         </div>
 
         <!-- TESTO -->
         <div class="center">
-            <h1 class="name">Samanta Bua</h1>
+            <div class="name">Samanta Bua</div>
 
-            <div class="roles">
-                Graphic Designer • Content Creator • Social Media Manager
+            <!-- NUOVA RIGA IN AZZURRO -->
+            <div class="subtitle">Graphic Designer • Content Creator • Social Media Manager</div>
+
+            <div class="about">
+                Sono una graphic designer specializzata in brand identity, progettazione grafica e content creation.
+                Lavoro con uno stile pulito, elegante e coerente, trasformando idee in progetti visivi dal forte impatto estetico.
             </div>
-
-            <p class="about">
-                Sono una graphic designer specializzata in brand identity,
-                progettazione grafica e content creation. Lavoro con uno stile pulito,
-                elegante e coerente, trasformando idee in progetti visivi dal forte impatto estetico.
-            </p>
         </div>
 
-        <!-- FOTO A DESTRA -->
+        <!-- FOTO DESTRA -->
         <div class="right">
             <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Workspace">
         </div>
 
-    </section>
+    </div>
 
 </body>
 </html>

@@ -1,75 +1,84 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samanta Bua – Portfolio</title>
+
+    <!-- Google Font: Firma calligrafica -->
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&display=swap" rel="stylesheet">
+
+    <!-- Google Font elegante serif -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: black;
+            background-color: #000;
             color: white;
-            font-family: 'Georgia', serif;
+            font-family: "Playfair Display", serif;
         }
 
         .hero {
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 80px 40px;
-            gap: 60px;
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
+        /* FOTO SOFT, ELEGANTE */
         .hero-image img {
             width: 380px;
-            border-radius: 4px;
-            box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 10px;
+            opacity: 0.28; /* foto resa delicata */
+            filter: grayscale(20%);
+            margin-right: 50px;
         }
 
-        .hero-text h1 {
-            font-size: 60px;
+        /* TESTO */
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-name {
+            font-size: 55px;
             margin: 0;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            font-family: "Didot", "Bodoni Moda", serif;
-        }
-
-        .hero-text h2 {
-            font-size: 20px;
-            color: #d4a531;
-            font-weight: normal;
-            margin-top: 10px;
-            margin-bottom: 25px;
             letter-spacing: 2px;
         }
 
-        .hero-description {
-            font-size: 18px;
-            max-width: 600px;
-            line-height: 1.6;
-            font-family: "Georgia", serif;
+        /* FIRMA CALLIGRAFICA ELEGANTE */
+        .signature {
+            font-family: "Dancing Script", cursive;
+            font-size: 40px;
+            color: #d4b26a;
+            margin-top: -10px;
+            margin-bottom: 25px;
+            opacity: 0.9;
         }
 
-        @media (max-width: 900px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-            }
-            .hero-image img {
-                width: 80%;
-            }
+        .hero-roles {
+            font-size: 20px;
+            margin: 0;
+            margin-bottom: 25px;
+            color: #d4b26a;
+        }
+
+        .hero-description {
+            line-height: 1.6;
+            font-size: 18px;
+            opacity: 0.9;
         }
     </style>
 </head>
 
 <body>
 
-    <!-- HEADER ELEGANTE -->
+    <!-- HERO ELEGANTE -->
     <section class="hero">
-        
+
         <!-- FOTO -->
         <div class="hero-image">
             <img src="sami.jpg" alt="Samanta Bua">
@@ -77,13 +86,19 @@
 
         <!-- TESTO -->
         <div class="hero-text">
-            <h1>SAMANTA BUA</h1>
-            <h2>Graphic Designer • Content Creation • Social Media</h2>
+            <h1 class="hero-name">SAMANTA BUA</h1>
+
+            <!-- Firma calligrafica -->
+            <div class="signature">Samanta</div>
+
+            <h2 class="hero-roles">
+                Graphic Designer • Content Creation • Social Media
+            </h2>
 
             <p class="hero-description">
-                Graphic designer specializzata in brand identity, progettazione grafica per stampa e digitale, 
-                content creation e gestione social media. 
-                Creo materiali visivi eleganti, puliti e coerenti con l’identità dei brand.
+                Graphic designer specializzata in brand identity, progettazione grafica per
+                stampa e digitale, content creation e gestione social media. Creo materiali
+                visivi eleganti, puliti e coerenti con l’identità dei brand.
             </p>
         </div>
 

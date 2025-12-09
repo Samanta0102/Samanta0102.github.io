@@ -8,7 +8,7 @@
     <!-- FONT Serif elegante -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- FONT sans serif minimal per testi -->
+    <!-- FONT sans serif minimal -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
@@ -52,29 +52,31 @@
             display: flex;
             flex-direction: row;
             align-items: center;
+            justify-content: space-between;
             width: 100%;
             min-height: 100vh;
             padding: 120px 60px 60px;
             box-sizing: border-box;
         }
 
-        /* FOTO SINISTRA */
-        .left {
-            width: 45%;
+        /* FOTO SINISTRA + DESTRA (uguali) */
+        .left img, .right img {
+            width: 100%;
+            height: 480px;
+            object-fit: cover;
+            border-radius: 16px;
+        }
+
+        .left, .right {
+            width: 33%;
             display: flex;
             justify-content: center;
         }
 
-        .left img {
-            width: 85%;
-            border-radius: 10px;
-            opacity: 0.9;
-        }
-
         /* TESTO CENTRALE */
         .center {
-            width: 35%;
-            padding-left: 40px;
+            width: 33%;
+            padding: 0 40px;
         }
 
         .name {
@@ -85,7 +87,7 @@
             color: #F9F6D5;
         }
 
-        /* NUOVO SOTTOTITOLO: tutto su una riga */
+        /* SOTTOTITOLO */
         .subtitle {
             font-size: 18px;
             color: #5BA5C4;
@@ -101,28 +103,11 @@
             max-width: 420px;
         }
 
-        /* FOTO DESTRA */
-        .right {
-            width: 40%;
-            display: flex;
-            justify-content: flex-end;
-        }
-
-        .right img {
-            width: 90%;
-            border-radius: 10px;
-        }
-
         /* RESPONSIVE */
         @media (max-width: 900px) {
 
             nav {
                 justify-content: center;
-            }
-
-            nav a {
-                margin-right: 15px;
-                font-size: 13px;
             }
 
             .container {
@@ -136,7 +121,8 @@
             }
 
             .left img, .right img {
-                width: 70%;
+                width: 80%;
+                height: auto;
                 margin-bottom: 20px;
             }
         }
@@ -161,12 +147,13 @@
             <img src="sami.jpg" alt="Samanta Bua">
         </div>
 
-        <!-- TESTO -->
+        <!-- TESTO CENTRALE -->
         <div class="center">
             <div class="name">Samanta Bua</div>
 
-            <!-- NUOVA RIGA IN AZZURRO -->
-            <div class="subtitle">Graphic Designer • Content Creator • Social Media Manager</div>
+            <div class="subtitle">
+                Graphic Designer • Content Creator • Social Media Manager
+            </div>
 
             <div class="about">
                 Sono una graphic designer specializzata in brand identity, progettazione grafica e content creation.

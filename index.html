@@ -8,9 +8,6 @@
     <!-- FONT Serif elegante per il nome -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- FONT serif professionale per il sottotitolo -->
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
-
     <!-- FONT sans serif minimal per testi -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
@@ -31,7 +28,7 @@
             left: 0;
             padding: 25px 50px;
             display: flex;
-            justify-content: flex-start;
+            justify-content: flex-end;
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(6px);
             z-index: 1000;
@@ -40,34 +37,34 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-right: 40px;
+            margin-left: 40px;
             font-size: 16px;
             letter-spacing: 1px;
             transition: 0.3s;
         }
 
         nav a:hover {
-            color: #d9b26f;
+            color: #5BA5C4;
         }
 
-        /* STRUTTURA */
+        /* CONTAINER PRINCIPALE */
         .container {
             display: flex;
+            flex-direction: row;
+            align-items: center;
             width: 100%;
             min-height: 100vh;
-            padding: 140px 60px 60px;
+            padding: 120px 60px 60px;
             box-sizing: border-box;
-            align-items: center;
-            justify-content: space-between;
         }
 
-        /* FOTO A SINISTRA — ORA NON SI TAGLIA PIÙ */
+        /* FOTO SINISTRA */
         .left {
             width: 33%;
+            max-height: 80vh;
             display: flex;
             justify-content: center;
             align-items: center;
-            max-height: 80vh;
         }
 
         .left img {
@@ -86,60 +83,65 @@
 
         .name {
             font-family: 'Playfair Display', serif;
-            font-size: 64px;
+            font-size: 58px;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             color: #F9F6D5;
-            line-height: 1.1;
         }
 
-        .subtitle {
-            font-family: 'Lora', serif;
+        .roles {
             font-size: 20px;
             color: #5BA5C4;
-            margin-bottom: 30px;
-            letter-spacing: 1px;
+            margin: 10px 0 20px;
+            letter-spacing: 0.5px;
         }
 
         .about {
-            font-size: 17px;
+            font-size: 16px;
             line-height: 1.7;
             color: #cfcfcf;
-            max-width: 450px;
+            max-width: 420px;
         }
 
-        /* FOTO A DESTRA */
+        /* FOTO DESTRA */
         .right {
             width: 33%;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: flex-end;
         }
 
         .right img {
             width: 100%;
-            height: auto;
+            object-fit: cover;
             border-radius: 12px;
         }
 
         /* RESPONSIVE */
-        @media (max-width: 1100px) {
+        @media (max-width: 900px) {
             .container {
                 flex-direction: column;
-                text-align: center;
+                padding: 140px 30px;
             }
 
             .left, .center, .right {
-                width: 90%;
-                max-height: none;
+                width: 100%;
+                text-align: center;
             }
 
             .center {
-                padding: 40px 0;
+                padding: 20px 0;
             }
 
             .name {
-                font-size: 48px;
+                font-size: 45px;
+            }
+
+            .roles {
+                font-size: 18px;
+            }
+
+            .left img, .right img {
+                width: 80%;
             }
         }
     </style>
@@ -147,14 +149,12 @@
 
 <body>
 
-    <!-- MENU -->
-<nav>
-  <a href="index.html">Home</a>
-  <a href="#about">About</a>
-  <a href="portfolio.html">Portfolio</a>
-  <a href="#contact">Contact</a>
-</nav>
-
+    <!-- MENU CORRETTO -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="#about">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <!-- CONTENUTO PRINCIPALE -->
@@ -169,21 +169,19 @@
         <div class="center">
             <h1 class="name">Samanta Bua</h1>
 
-            <div class="subtitle">
+            <div class="roles">
                 Graphic Designer • Content Creator • Social Media Manager
             </div>
 
-            <p class="about">
-                Sono una graphic designer specializzata in brand identity,
-                progettazione grafica e content creation.  
-                Lavoro con uno stile pulito, elegante e coerente, trasformando idee in
-                progetti visivi dal forte impatto estetico.
+            <p class="about" id="about">
+                Sono una graphic designer specializzata in brand identity, progettazione grafica e content creation. 
+                Lavoro con uno stile pulito, elegante e coerente, trasformando idee in progetti visivi dal forte impatto estetico.
             </p>
         </div>
 
         <!-- FOTO DESTRA -->
         <div class="right">
-            <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Laptop workspace">
+            <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Working on laptop">
         </div>
 
     </div>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samanta Bua • Portfolio</title>
 
-    <!-- FONT E STILE -->
+    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
     <style>
@@ -15,23 +15,22 @@
             background: #000;
             color: #fff;
             font-family: "Inter", sans-serif;
-            line-height: 1.6;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 60px 25px;
         }
 
         h1, h2 {
             font-family: "Playfair Display", serif;
-            margin-bottom: 15px;
         }
 
         h1 {
             font-size: 42px;
             font-weight: 600;
+            margin-bottom: 15px;
         }
 
         h2 {
@@ -42,6 +41,7 @@
         p {
             font-size: 18px;
             color: #e4e4e4;
+            line-height: 1.6;
         }
 
         .gold {
@@ -54,6 +54,35 @@
             background: #d4af37;
             margin: 25px 0;
         }
+
+        /* SEZIONE CON FOTO */
+        .about-section {
+            display: flex;
+            align-items: flex-start;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-photo {
+            width: 330px;
+            height: auto;
+            border: 1px solid #d4af37;
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        @media(max-width: 800px) {
+            .about-section {
+                flex-direction: column;
+            }
+            .about-photo {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 
@@ -61,33 +90,41 @@
 
     <div class="container">
 
-        <!-- INTRO -->
         <h1>Ciao, sono Samanta</h1>
         <p class="gold">Graphic Designer • Content Creation • Social Media</p>
 
         <div class="divider"></div>
 
-        <!-- PROFESSIONAL ABOUT -->
         <h2>Chi sono</h2>
-        <p>
-            Sono una graphic designer specializzata in brand identity, progettazione grafica per stampa e digital,
-            content creation e gestione social media.  
-            Mi occupo di trasformare idee in visual coerenti, eleganti e funzionali, curando ogni fase: concept,
-            layout, produzione contenuti, file esecutivi e preparazione per la stampa.
-        </p>
 
-        <p>
-            Ho esperienza sia nel settore medico/dentale che in quello <span class="gold">food & hospitality</span>, 
-            inclusi progetti internazionali.  
-            Lavoro con grande attenzione ai dettagli, estetica e coerenza visiva, creando materiali che rispecchiano
-            identità, valori e tono di voce dei brand.
-        </p>
+        <div class="about-section">
+            
+            <!-- TESTO -->
+            <div class="about-text">
+                <p>
+                    Sono una graphic designer specializzata in brand identity, progettazione grafica per stampa e digital,
+                    content creation e gestione social media.  
+                    Mi occupo di trasformare idee in visual coerenti, eleganti e funzionali, curando ogni fase del processo:
+                    concept, layout, produzione contenuti, file esecutivi e preparazione per la stampa.
+                </p>
 
-        <p><i>Portfolio in arrivo — sto selezionando i progetti migliori ✨</i></p>
+                <p>
+                    Ho esperienza sia nel settore medico/dentale che in quello 
+                    <span class="gold">food & hospitality</span>, inclusi progetti internazionali.  
+                    Lavoro con grande attenzione ai dettagli, estetica e coerenza visiva, creando materiali che rispecchiano
+                    identità, valori e tono di voce dei brand.
+                </p>
+
+                <p><i>Portfolio in arrivo — sto selezionando i progetti migliori ✨</i></p>
+            </div>
+
+            <!-- FOTO -->
+            <img src="foto-samanta.jpg" alt="Samanta Bua" class="about-photo">
+
+        </div>
 
         <div class="divider"></div>
 
-        <!-- CONTATTI -->
         <h2>Contatti</h2>
         <p>Email: <a href="mailto:sami22misa@gmail.com" style="color:#d4af37;">sami22misa@gmail.com</a></p>
         <p>LinkedIn: <span style="color:#888;">in aggiornamento</span></p>

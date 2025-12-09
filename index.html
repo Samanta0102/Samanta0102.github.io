@@ -1,15 +1,12 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samanta Bua – Graphic Designer</title>
 
-    <!-- FONT Serif elegante per il nome -->
+    <!-- FONT -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
-
-    <!-- FONT sans serif minimal per testi -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
     <style>
@@ -17,8 +14,8 @@
             margin: 0;
             padding: 0;
             background: #000;
-            color: white;
             font-family: 'Inter', sans-serif;
+            color: white;
         }
 
         /* MENU */
@@ -45,43 +42,40 @@
         }
 
         nav a:hover {
-            color: #d9b26f;
+            color: #5BA5C4;
         }
 
-        /* CONTAINER */
-        .container {
+        /* LAYOUT 3 COLONNE */
+        .wrapper {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding-top: 120px;
             display: flex;
-            flex-direction: row;
+            justify-content: space-between;
             align-items: center;
-            width: 100%;
-            min-height: 100vh;
-            padding: 120px 60px 60px;
-            box-sizing: border-box;
+            gap: 40px;
         }
 
         /* FOTO SINISTRA */
         .left {
-            width: 35%;
-            display: flex;
-            justify-content: center;
+            width: 32%;
         }
 
         .left img {
-            width: 85%;
+            width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 12px;
             object-fit: cover;
         }
 
         /* TESTO CENTRALE */
         .center {
-            width: 35%;
-            padding-left: 40px;
+            width: 36%;
         }
 
         .name {
             font-family: 'Playfair Display', serif;
-            font-size: 60px;
+            font-size: 64px;
             font-weight: 600;
             margin-bottom: 10px;
             color: #F9F6D5;
@@ -89,63 +83,37 @@
 
         .roles {
             font-size: 20px;
+            line-height: 1.6;
             color: #5BA5C4;
-            letter-spacing: 1px;
             margin-bottom: 25px;
         }
 
         .about {
             font-size: 16px;
             line-height: 1.7;
-            color: #cfcfcf;
-            max-width: 420px;
+            color: #e0e0e0;
         }
 
         /* FOTO DESTRA */
         .right {
-            width: 35%;
-            display: flex;
-            justify-content: center;
+            width: 32%;
         }
 
         .right img {
-            width: 90%;
+            width: 100%;
             height: auto;
-            border-radius: 10px;
+            border-radius: 12px;
             object-fit: cover;
         }
 
-        /* RESPONSIVE */
         @media (max-width: 900px) {
-
-            .container {
+            .wrapper {
                 flex-direction: column;
                 text-align: center;
-                padding-top: 160px;
             }
 
-            .left,
-            .center,
-            .right {
-                width: 100%;
-                padding: 0;
-            }
-
-            .left img,
-            .right img {
-                width: 80%;
-            }
-
-            .center {
-                margin-top: 30px;
-            }
-
-            .name {
-                font-size: 45px;
-            }
-
-            .roles {
-                font-size: 18px;
+            .left, .center, .right {
+                width: 90%;
             }
         }
     </style>
@@ -155,14 +123,14 @@
 
     <!-- MENU -->
     <nav>
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="#about">About</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- HERO SECTION -->
-    <div class="container">
+    <!-- CONTENUTO -->
+    <div class="wrapper">
 
         <!-- FOTO SINISTRA -->
         <div class="left">
@@ -185,11 +153,10 @@
 
         <!-- FOTO DESTRA -->
         <div class="right">
-            <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Work image">
+            <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Work Image">
         </div>
 
     </div>
 
 </body>
-
 </html>

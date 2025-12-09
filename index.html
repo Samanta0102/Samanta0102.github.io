@@ -134,6 +134,66 @@
             }
 
             .container {
-                flex-direction: c
+                flex-direction: column;
+                text-align: center;
+                padding: 130px 20px 40px;
+            }
 
+            .left, .center, .right {
+                width: 100%;
+            }
 
+            .right img, .left img {
+                width: 70%;
+                margin-bottom: 30px;
+            }
+
+            .center {
+                padding-left: 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<!-- MENU -->
+<nav>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Portfolio</a>
+    <a href="#">Contact</a>
+</nav>
+
+<div class="container">
+
+    <!-- FOTO TUA -->
+    <div class="left">
+        <img src="sami.jpg" alt="Samanta Bua">
+    </div>
+
+    <!-- TESTO CENTRALE -->
+    <div class="center">
+        <div class="name">Samanta Bua</div>
+
+        <div class="signature">Samanta – Graphic Designer</div>
+
+        <div class="role">Graphic Designer</div>
+
+        <div class="about">
+            Sono una graphic designer specializzata in brand identity, progettazione grafica
+            e content creation. Lavoro con uno stile pulito, elegante e coerente, trasformando
+            idee in progetti visivi dal forte impatto estetico.
+        </div>
+    </div>
+
+    <!-- FOTO UNSPLASH -->
+    <div class="right">
+        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=1200&q=80" alt="Portfolio Image">
+    </div>
+
+</div>
+
+</body>
+</html>

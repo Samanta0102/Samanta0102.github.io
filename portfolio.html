@@ -1,27 +1,113 @@
-<a href="progetto-dental-tribune.html" class="project-card">
-  <div class="project-thumb-wrapper">
-    <img
-      src="dental-tribune-thumb.jpg"
-      alt="Copertina del progetto editoriale Dental Tribune"
-      class="project-thumb"
-    />
-  </div>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio – Samanta Bua</title>
 
-  <h2 class="project-title">Dental Tribune – Progetto editoriale</h2>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <div class="project-meta">
-    editoriale · impaginazione · settore odontoiatrico
-  </div>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: white;
+            font-family: 'Inter', sans-serif;
+        }
 
-  <p class="project-desc">
-    Progetto di grafica editoriale e impaginazione realizzato per
-    <strong>RESISTA — ING. Carlo Alberto Issoglio &amp; C. S.R.L.</strong>
-    e pubblicato sulla rivista internazionale 
-    <em>Dental Tribune</em>, in occasione dell’evento AEEDC Dubai 2025.
-  </p>
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: flex-end;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+        }
 
-  <div class="project-link">
-    <span>Apri il case study</span>
-    <span class="icon">↗</span>
-  </div>
-</a>
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 40px;
+            font-size: 16px;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover {
+            color: #5BA5C4;
+        }
+
+        .container {
+            padding: 150px 60px 60px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #F9F6D5;
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+
+        /* Griglia Portfolio */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+        }
+
+        .item {
+            text-decoration: none;
+            color: white;
+            display: block;
+            transition: 0.3s;
+        }
+
+        .item:hover {
+            transform: scale(1.03);
+        }
+
+        .item img {
+            width: 100%;
+            height: 350px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+
+        .item-title {
+            font-size: 18px;
+            margin-top: 12px;
+            color: #5BA5C4;
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="portfolio.html">Portfolio</a>
+</nav>
+
+<div class="container">
+    <h1>Portfolio</h1>
+
+    <div class="grid">
+
+        <!-- PROGETTO 1: Dental Tribune -->
+        <a class="item" href="progetto-dental-tribune.html">
+            <img src="dental-tribune-thumb.jpg" alt="Dental Tribune Project">
+            <div class="item-title">Dental Tribune – Progetto Editoriale</div>
+        </a>
+
+        <!-- Altri lavori li aggiungeremo quando sei pronta -->
+
+    </div>
+</div>
+
+</body>
+</html>

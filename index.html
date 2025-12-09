@@ -5,74 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samanta Bua – Portfolio</title>
 
-    <!-- FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
-
     <style>
         body {
             margin: 0;
-            background-color: #000;
-            color: #fff;
-            font-family: "Inter", sans-serif;
+            padding: 0;
+            background: black;
+            color: white;
+            font-family: 'Georgia', serif;
         }
 
         .hero {
-            padding: 80px 50px;
-        }
-
-        .hero-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 50px;
-            max-width: 1200px;
-            margin: 0 auto;
+            padding: 80px 40px;
+            gap: 60px;
         }
 
         .hero-image img {
-            width: 420px;
+            width: 380px;
             border-radius: 4px;
-            object-fit: cover;
+            box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.18);
         }
 
-        .hero-text {
-            max-width: 600px;
-        }
-
-        .hero-name {
-            font-family: "Playfair Display", serif;
-            font-size: 64px;
-            font-weight: 400;
+        .hero-text h1 {
+            font-size: 60px;
             margin: 0;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: "Didot", "Bodoni Moda", serif;
         }
 
-        .hero-roles {
-            color: #d4af37;
-            font-size: 22px;
+        .hero-text h2 {
+            font-size: 20px;
+            color: #d4a531;
+            font-weight: normal;
             margin-top: 10px;
-            margin-bottom: 30px;
-            font-weight: 300;
-            letter-spacing: 1px;
+            margin-bottom: 25px;
+            letter-spacing: 2px;
         }
 
         .hero-description {
             font-size: 18px;
+            max-width: 600px;
             line-height: 1.6;
-            opacity: 0.9;
+            font-family: "Georgia", serif;
         }
 
-        @media(max-width: 900px) {
-            .hero-container {
+        @media (max-width: 900px) {
+            .hero {
                 flex-direction: column;
                 text-align: center;
             }
-
             .hero-image img {
                 width: 80%;
-            }
-
-            .hero-name {
-                font-size: 48px;
             }
         }
     </style>
@@ -80,28 +67,26 @@
 
 <body>
 
-    <!-- HEADER HERO -->
+    <!-- HEADER ELEGANTE -->
     <section class="hero">
-        <div class="hero-container">
-
-            <!-- FOTO -->
-            <div class="hero-image">
-                <img src="FOTO.jpeg" alt="Samanta Bua">
-            </div>
-
-            <!-- TESTO -->
-            <div class="hero-text">
-                <h1 class="hero-name">SAMANTA BUA</h1>
-                <h2 class="hero-roles">Graphic Designer • Content Creation • Social Media</h2>
-
-                <p class="hero-description">
-                    Graphic designer specializzata in brand identity, progettazione grafica per stampa e digitale,
-                    content creation e gestione social media. Creo materiali eleganti, puliti e coerenti con l’identità
-                    visiva dei brand.
-                </p>
-            </div>
-
+        
+        <!-- FOTO -->
+        <div class="hero-image">
+            <img src="FOTO.jpg" alt="Samanta Bua">
         </div>
+
+        <!-- TESTO -->
+        <div class="hero-text">
+            <h1>SAMANTA BUA</h1>
+            <h2>Graphic Designer • Content Creation • Social Media</h2>
+
+            <p class="hero-description">
+                Graphic designer specializzata in brand identity, progettazione grafica per stampa e digitale, 
+                content creation e gestione social media. 
+                Creo materiali visivi eleganti, puliti e coerenti con l’identità dei brand.
+            </p>
+        </div>
+
     </section>
 
 </body>

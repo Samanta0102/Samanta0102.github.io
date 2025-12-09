@@ -8,11 +8,11 @@
     <!-- FONT Serif elegante per il nome -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <!-- FONT calligrafico per la firma -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-
     <!-- FONT sans serif minimal per testi -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FONT azzurro calligrafico (solo per i ruoli) -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
     <style>
         body {
@@ -29,9 +29,10 @@
             position: fixed;
             top: 0;
             left: 0;
-            padding: 25px 50px;
+            padding: 25px 40px; /* PIÙ A SINISTRA */
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start; /* SPOSTA A SINISTRA */
+            gap: 40px; /* DISTANZA TRA LE VOCI */
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(6px);
             z-index: 1000;
@@ -40,7 +41,6 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 40px;
             font-size: 16px;
             letter-spacing: 1px;
             transition: 0.3s;
@@ -50,7 +50,7 @@
             color: #d9b26f;
         }
 
-        /* CONTAINER */
+        /* LAYOUT PRINCIPALE */
         .container {
             display: flex;
             flex-direction: row;
@@ -63,7 +63,7 @@
 
         /* FOTO SINISTRA */
         .left {
-            width: 45%;
+            width: 42%;
             display: flex;
             justify-content: center;
         }
@@ -71,12 +71,12 @@
         .left img {
             width: 85%;
             border-radius: 10px;
-            opacity: 0.85;
+            opacity: 0.9;
         }
 
         /* TESTO CENTRALE */
         .center {
-            width: 35%;
+            width: 38%;
             padding-left: 40px;
         }
 
@@ -84,22 +84,23 @@
             font-family: 'Playfair Display', serif;
             font-size: 60px;
             font-weight: 600;
-            margin-bottom: 10px;
-            color: #F9F6D5; 
+            margin-bottom: 5px;
+            color: #F9F6D5; /* avorio */
         }
 
-        .signature {
+        /* NUOVA LINEA RUOLI */
+        .roles {
             font-family: 'Great Vibes', cursive;
             font-size: 38px;
-            margin-top: -15px;
-            color: #5BA5C4;
+            margin-bottom: 20px;
+            color: #5BA5C4; /* azzurro */
         }
 
         .role {
             font-size: 20px;
             margin: 25px 0;
             letter-spacing: 1px;
-            color: #A52B68;
+            color: #A52B68; /* rosa prugna */
         }
 
         .about {
@@ -126,12 +127,67 @@
 
             nav {
                 justify-content: center;
-            }
-
-            nav a {
-                margin-left: 20px;
-                font-size: 14px;
+                gap: 20px;
             }
 
             .container {
                 flex-direction: column;
+                text-align: center;
+                padding-top: 160px;
+            }
+
+            .left, .center, .right {
+                width: 100%;
+                padding: 0;
+            }
+
+            .left img, .right img {
+                width: 70%;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contatti</a>
+    </nav>
+
+    <!-- SEZIONE PRINCIPALE -->
+    <div class="container">
+
+        <!-- FOTO SINISTRA -->
+        <div class="left">
+            <img src="sami.jpg" alt="Samanta Bua">
+        </div>
+
+        <!-- TESTO CENTRALE -->
+        <div class="center">
+            <h1 class="name">Samanta Bua</h1>
+
+            <!-- NUOVA LINEA RUOLI IN AZZURRO -->
+            <div class="roles">Graphic Designer • Content Creator • Social Media Manager</div>
+
+            <div class="role">Graphic Designer</div>
+
+            <p class="about">
+                Sono una graphic designer specializzata in brand identity, progettazione grafica e content creation.
+                Lavoro con uno stile pulito, elegante e coerente, trasformando idee in progetti visivi dal forte impatto estetico.
+            </p>
+        </div>
+
+        <!-- FOTO DESTRA (UNSPLASH) -->
+        <div class="right">
+            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&w=1100&q=80" alt="Workspace">
+        </div>
+
+    </div>
+
+</body>
+</html>

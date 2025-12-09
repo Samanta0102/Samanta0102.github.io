@@ -1,256 +1,125 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dental Tribune – Progetto editoriale | Samanta Bua</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Tribune – Progetto Editoriale</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #F9F6D5;
+            font-family: 'Inter', sans-serif;
+        }
 
-    body {
-      background: #000;
-      color: #f9f6d5;
-      font-family: "Inter", sans-serif;
-    }
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: flex-end;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+        }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 40px;
+            font-size: 16px;
+        }
 
-    nav {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      padding: 20px 60px;
-      display: flex;
-      justify-content: flex-start;
-      gap: 40px;
-      background: rgba(0, 0, 0, 0.7);
-      backdrop-filter: blur(6px);
-      z-index: 1000;
-    }
+        nav a:hover {
+            color: #5BA5C4;
+        }
 
-    nav a {
-      font-size: 15px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #f9f6d5;
-      opacity: 0.9;
-      transition: color 0.25s ease, opacity 0.25s ease;
-    }
+        .container {
+            padding: 150px 60px 80px;
+            max-width: 900px;
+            margin: auto;
+        }
 
-    nav a:hover {
-      color: #5ba5c4;
-      opacity: 1;
-    }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #F9F6D5;
+            font-size: 46px;
+            margin-bottom: 10px;
+        }
 
-    .wrapper {
-      padding: 120px 7vw 80px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
+        h2 {
+            color: #5BA5C4;
+            font-size: 22px;
+            margin-bottom: 30px;
+        }
 
-    .back-link {
-      font-size: 14px;
-      color: #5ba5c4;
-      margin-bottom: 24px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
+        p {
+            font-size: 18px;
+            line-height: 1.7;
+            color: #d2d2d2;
+            margin-bottom: 20px;
+        }
 
-    .back-link span.icon {
-      font-size: 16px;
-    }
+        .project-image {
+            width: 100%;
+            border-radius: 12px;
+            margin-top: 40px;
+            object-fit: cover;
+        }
 
-    .title {
-      font-family: "Playfair Display", serif;
-      font-size: 40px;
-      margin-bottom: 10px;
-    }
+        .back-link {
+            display: inline-block;
+            color: #5BA5C4;
+            margin-bottom: 25px;
+            text-decoration: none;
+            font-size: 15px;
+        }
 
-    .subtitle {
-      font-size: 16px;
-      color: #5ba5c4;
-      margin-bottom: 28px;
-    }
+        .back-link:hover {
+            color: #F9F6D5;
+        }
 
-    .meta {
-      font-size: 13px;
-      color: #c2c2c2;
-      text-transform: uppercase;
-      letter-spacing: 0.18em;
-      margin-bottom: 30px;
-    }
-
-    .text-block {
-      font-size: 15px;
-      color: #e0e0e0;
-      line-height: 1.9;
-      margin-bottom: 16px;
-      max-width: 780px;
-    }
-
-    .text-block strong {
-      color: #f9f6d5;
-      font-weight: 500;
-    }
-
-    .cover-wrapper {
-      max-width: 780px;
-      margin: 40px auto 24px;
-      border-radius: 18px;
-      overflow: hidden; /* elimina bordo bianco e ciuffo: facciamo un piccolo crop */
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.95);
-    }
-
-    .cover-wrapper img {
-      width: 100%;
-      display: block;
-      transform: scale(1.05) translateY(2%); /* zoom leggero per togliere bordi indesiderati */
-    }
-
-    .buttons {
-      margin-top: 24px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px 18px;
-      border-radius: 999px;
-      font-size: 14px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease;
-    }
-
-    .btn-primary {
-      background: #a52b68;
-      color: #f9f6d5;
-      border-color: #a52b68;
-    }
-
-    .btn-primary:hover {
-      background: transparent;
-      color: #f9f6d5;
-      border-color: #f9f6d5;
-    }
-
-    .btn-ghost {
-      background: transparent;
-      color: #5ba5c4;
-      border-color: #5ba5c4;
-    }
-
-    .btn-ghost:hover {
-      background: #5ba5c4;
-      color: #000;
-    }
-
-    @media (max-width: 700px) {
-      nav {
-        justify-content: center;
-        padding: 16px 20px;
-        gap: 18px;
-      }
-
-      .wrapper {
-        padding: 110px 6vw 60px;
-      }
-
-      .title {
-        font-size: 32px;
-      }
-
-      .cover-wrapper {
-        margin-top: 28px;
-      }
-    }
-  </style>
+    </style>
 </head>
 
 <body>
-  <nav>
+
+<nav>
     <a href="index.html">Home</a>
-    <a href="index.html#about">About</a>
     <a href="portfolio.html">Portfolio</a>
-    <a href="index.html#contact">Contact</a>
-  </nav>
+</nav>
 
-  <main class="wrapper">
-    <a href="portfolio.html" class="back-link">
-      <span class="icon">←</span>
-      <span>Torna al portfolio</span>
-    </a>
+<div class="container">
 
-    <h1 class="title">Dental Tribune – Progetto editoriale</h1>
+    <a href="portfolio.html" class="back-link">← Torna al portfolio</a>
 
-    <p class="subtitle">
-      Progetto di impaginazione e grafica editoriale per la rivista internazionale
-      <strong>Dental Tribune</strong>, realizzato per RESISTA Oral Implant Solutions.
+    <h1>Dental Tribune – Progetto Editoriale</h1>
+
+    <h2>Articolo pubblicato sulla rivista internazionale Dental Tribune</h2>
+
+    <p>
+        Questo progetto è stato realizzato per <strong>RESISTA (Ing. Carlo Alberto Issoglio & C. S.R.L.)</strong>,
+        azienda specializzata nel settore dell’implantologia orale. Mi sono occupata dello sviluppo grafico, della
+        tipografia e dell’impaginazione, con l’obiettivo di rendere il contenuto tecnico chiaro, leggibile e coerente
+        con l’identità professionale del brand.
     </p>
 
-    <div class="meta">
-      editoriale · impaginazione · settore medicale · pubblicazione internazionale
-    </div>
-
-    <p class="text-block">
-      Per <strong>RESISTA Oral Implant Solutions</strong> mi è stato affidato lo sviluppo grafico
-      e l’impaginazione di un articolo tecnico dedicato agli impianti monofasici, destinato alla
-      rivista internazionale <em>Dental Tribune</em> in occasione dell’evento
-      <strong>AEEDC Dubai 2025</strong>.
+    <p>
+        Il lavoro ha richiesto attenzione alla gerarchia visiva, all’allineamento degli elementi e alla coerenza stilistica,
+        mantenendo un equilibrio tra rigore editoriale e pulizia estetica, in linea con gli standard della rivista
+        <em>Dental Tribune</em>.
     </p>
 
-    <p class="text-block">
-      Il settore medicale richiede una comunicazione chiara, rigorosa e istituzionale. Ho lavorato
-      sull’<strong>equilibrio tra testo, immagini e gerarchia visiva</strong>, in modo che i contenuti
-      fossero facilmente leggibili anche in un contesto fieristico, dove il tempo di attenzione è
-      limitato.
-    </p>
+    <img src="dental-tribune-full.jpg" class="project-image" alt="Progetto editoriale Dental Tribune">
 
-    <p class="text-block">
-      Mi sono occupata di:
-      <strong>allineamento tipografico, impaginazione, gestione dei box informativi, evidenziazione dei
-      messaggi chiave</strong> e coerenza con l’immagine del brand RESISTA. L’obiettivo era rendere
-      l’articolo <strong>pulito, leggibile e professionale</strong>, rispettando gli standard della
-      rivista internazionale.
-    </p>
+</div>
 
-    <div class="cover-wrapper">
-      <img
-        src="dental-tribune-full.jpg"
-        alt="Visual del progetto editoriale pubblicato su Dental Tribune"
-      />
-    </div>
-
-    <div class="buttons">
-      <a
-        class="btn btn-primary"
-        href="https://it.dental-tribune.com/e-paper/today-show-dailies/today/today-uae-international-dental-conference-arab-dental-exhibition-dubai-%C2%B7-4-6-february-2025/?time=20250205"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Vedi l'articolo completo sul sito Dental Tribune
-      </a>
-
-      <a href="portfolio.html" class="btn btn-ghost">
-        Torna alla lista dei progetti
-      </a>
-    </div>
-  </main>
 </body>
 </html>

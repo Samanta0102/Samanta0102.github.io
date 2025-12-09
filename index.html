@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,10 +45,10 @@
         }
 
         nav a:hover {
-            color: #5BA5C4;
+            color: #d9b26f;
         }
 
-        /* CONTAINER PRINCIPALE */
+        /* CONTAINER */
         .container {
             display: flex;
             flex-direction: row;
@@ -60,30 +61,27 @@
 
         /* FOTO SINISTRA */
         .left {
-            width: 33%;
-            max-height: 80vh;
+            width: 35%;
             display: flex;
             justify-content: center;
-            align-items: center;
         }
 
         .left img {
-            width: 100%;
+            width: 85%;
             height: auto;
-            object-fit: contain;
-            border-radius: 12px;
-            display: block;
+            border-radius: 10px;
+            object-fit: cover;
         }
 
         /* TESTO CENTRALE */
         .center {
-            width: 34%;
-            padding: 0 40px;
+            width: 35%;
+            padding-left: 40px;
         }
 
         .name {
             font-family: 'Playfair Display', serif;
-            font-size: 58px;
+            font-size: 60px;
             font-weight: 600;
             margin-bottom: 10px;
             color: #F9F6D5;
@@ -92,8 +90,8 @@
         .roles {
             font-size: 20px;
             color: #5BA5C4;
-            margin: 10px 0 20px;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
         }
 
         .about {
@@ -105,31 +103,41 @@
 
         /* FOTO DESTRA */
         .right {
-            width: 33%;
+            width: 35%;
             display: flex;
-            justify-content: flex-end;
+            justify-content: center;
         }
 
         .right img {
-            width: 100%;
+            width: 90%;
+            height: auto;
+            border-radius: 10px;
             object-fit: cover;
-            border-radius: 12px;
         }
 
         /* RESPONSIVE */
         @media (max-width: 900px) {
+
             .container {
                 flex-direction: column;
-                padding: 140px 30px;
+                text-align: center;
+                padding-top: 160px;
             }
 
-            .left, .center, .right {
+            .left,
+            .center,
+            .right {
                 width: 100%;
-                text-align: center;
+                padding: 0;
+            }
+
+            .left img,
+            .right img {
+                width: 80%;
             }
 
             .center {
-                padding: 20px 0;
+                margin-top: 30px;
             }
 
             .name {
@@ -139,25 +147,21 @@
             .roles {
                 font-size: 18px;
             }
-
-            .left img, .right img {
-                width: 80%;
-            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- MENU CORRETTO -->
+    <!-- MENU -->
     <nav>
-        <a href="index.html">Home</a>
+        <a href="#">Home</a>
         <a href="#about">About</a>
         <a href="portfolio.html">Portfolio</a>
         <a href="#contact">Contact</a>
     </nav>
 
-    <!-- CONTENUTO PRINCIPALE -->
+    <!-- HERO SECTION -->
     <div class="container">
 
         <!-- FOTO SINISTRA -->
@@ -167,24 +171,25 @@
 
         <!-- TESTO CENTRALE -->
         <div class="center">
-            <h1 class="name">Samanta Bua</h1>
+            <div class="name">Samanta Bua</div>
 
             <div class="roles">
                 Graphic Designer • Content Creator • Social Media Manager
             </div>
 
-            <p class="about" id="about">
-                Sono una graphic designer specializzata in brand identity, progettazione grafica e content creation. 
+            <div class="about">
+                Sono una graphic designer specializzata in brand identity, progettazione grafica e content creation.
                 Lavoro con uno stile pulito, elegante e coerente, trasformando idee in progetti visivi dal forte impatto estetico.
-            </p>
+            </div>
         </div>
 
         <!-- FOTO DESTRA -->
         <div class="right">
-            <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Working on laptop">
+            <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Work image">
         </div>
 
     </div>
 
 </body>
+
 </html>

@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Samanta Bua – Portfolio</title>
+    <title>Samanta Bua – Graphic Designer</title>
 
     <!-- FONT Serif elegante per il nome -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- FONT serif professionale per il sottotitolo -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500&display=swap" rel="stylesheet">
 
     <!-- FONT sans serif minimal per testi -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -15,7 +18,7 @@
         body {
             margin: 0;
             padding: 0;
-            background: #000000;
+            background: #000;
             color: white;
             font-family: 'Inter', sans-serif;
         }
@@ -26,16 +29,16 @@
             position: fixed;
             top: 0;
             left: 0;
-            padding: 20px 50px;
+            padding: 25px 50px;
             display: flex;
             justify-content: flex-start;
-            background: rgba(0,0,0,0.45);
+            background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(6px);
             z-index: 1000;
         }
 
         nav a {
-            color: #ffffff;
+            color: #fff;
             text-decoration: none;
             margin-right: 40px;
             font-size: 16px;
@@ -47,58 +50,76 @@
             color: #d9b26f;
         }
 
-        /* HOME – LAYOUT PRINCIPALE */
+        /* STRUTTURA */
         .container {
+            display: flex;
+            width: 100%;
+            min-height: 100vh;
+            padding: 140px 60px 60px;
+            box-sizing: border-box;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /* FOTO A SINISTRA — ORA NON SI TAGLIA PIÙ */
+        .left {
+            width: 33%;
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 60px;
-            width: 100%;
-            padding: 160px 60px 100px;
-            box-sizing: border-box;
+            max-height: 80vh;
         }
 
-        /* FOTO A SINISTRA */
         .left img {
-            width: 390px;          /* proporzione PERFETTA su tutti i device */
+            width: 100%;
             height: auto;
-            border-radius: 14px;
-            object-fit: cover;
+            object-fit: contain;
+            border-radius: 12px;
+            display: block;
         }
 
         /* TESTO CENTRALE */
         .center {
-            max-width: 560px;
+            width: 34%;
+            padding: 0 40px;
         }
 
         .name {
             font-family: 'Playfair Display', serif;
-            font-size: 62px;
+            font-size: 64px;
             font-weight: 600;
-            color: #F9F6D5;
             margin-bottom: 15px;
+            color: #F9F6D5;
+            line-height: 1.1;
         }
 
-        .roles {
-            font-size: 19px;
+        .subtitle {
+            font-family: 'Lora', serif;
+            font-size: 20px;
             color: #5BA5C4;
-            margin-bottom: 25px;
-            letter-spacing: 0.5px;
+            margin-bottom: 30px;
+            letter-spacing: 1px;
         }
 
         .about {
             font-size: 17px;
             line-height: 1.7;
-            color: #d0d0d0;
-            max-width: 500px;
+            color: #cfcfcf;
+            max-width: 450px;
         }
 
         /* FOTO A DESTRA */
+        .right {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
         .right img {
-            width: 390px;
+            width: 100%;
             height: auto;
-            border-radius: 14px;
-            object-fit: cover;
+            border-radius: 12px;
         }
 
         /* RESPONSIVE */
@@ -106,54 +127,64 @@
             .container {
                 flex-direction: column;
                 text-align: center;
-                padding-top: 140px;
             }
 
-            .roles { font-size: 18px; }
+            .left, .center, .right {
+                width: 90%;
+                max-height: none;
+            }
 
-            .left img, .right img {
-                width: 300px;
+            .center {
+                padding: 40px 0;
+            }
+
+            .name {
+                font-size: 48px;
             }
         }
-
     </style>
 </head>
+
 <body>
 
     <!-- MENU -->
     <nav>
         <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#contact">Contact</a>
+        <a href="#">About</a>
+        <a href="#">Portfolio</a>
+        <a href="#">Contact</a>
     </nav>
 
-    <!-- SEZIONE HOME -->
-    <section class="container">
+    <!-- CONTENUTO PRINCIPALE -->
+    <div class="container">
 
+        <!-- FOTO SINISTRA -->
         <div class="left">
             <img src="sami.jpg" alt="Samanta Bua">
         </div>
 
+        <!-- TESTO CENTRALE -->
         <div class="center">
             <h1 class="name">Samanta Bua</h1>
 
-            <div class="roles">
+            <div class="subtitle">
                 Graphic Designer • Content Creator • Social Media Manager
             </div>
 
             <p class="about">
-                Sono una graphic designer specializzata in brand identity, progettazione grafica
-                e content creation. Lavoro con uno stile pulito, elegante e coerente, trasformando
-                idee in progetti visivi dal forte impatto estetico.
+                Sono una graphic designer specializzata in brand identity,
+                progettazione grafica e content creation.  
+                Lavoro con uno stile pulito, elegante e coerente, trasformando idee in
+                progetti visivi dal forte impatto estetico.
             </p>
         </div>
 
+        <!-- FOTO DESTRA -->
         <div class="right">
-            <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Work Environment">
+            <img src="christin-hume-hBuwVLcYTnA-unsplash.jpg" alt="Laptop workspace">
         </div>
 
-    </section>
+    </div>
 
 </body>
 </html>

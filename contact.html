@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatti – Samanta Bua</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* MENU */
+        nav {
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 25px 50px;
+            display: flex;
+            justify-content: flex-start;
+            background: rgba(0, 0, 0, 0.45);
+            backdrop-filter: blur(6px);
+            z-index: 1000;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-right: 40px;
+            font-size: 16px;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            color: #5BA5C4;
+        }
+
+        /* CONTENUTO */
+        .container {
+            padding: 150px 20px;
+            max-width: 600px;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            color: #F9F6D5;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #cfcfcf;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        a.contact-link {
+            display: block;
+            margin: 15px 0;
+            font-size: 20px;
+            color: #5BA5C4;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        a.contact-link:hover {
+            color: #d9b26f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <div class="container">
+
+        <h1>Contatti</h1>
+
+        <p>
+            Per collaborazioni, richieste o informazioni puoi contattarmi tramite email o LinkedIn.  
+            Rispondo sempre nel più breve tempo possibile.
+        </p>
+
+        <a href="mailto:samanta0102@gmail.com" class="contact-link">📧 samanta0102@gmail.com</a>
+
+        <a href="https://www.linkedin.com/in/samanta-bua" target="_blank" class="contact-link">
+            🔗 LinkedIn – Samanta Bua
+        </a>
+
+        <a href="portfolio.html" class="contact-link" style="margin-top:40px; color:#A52B68;">
+            ← Torna al Portfolio
+        </a>
+
+    </div>
+
+</body>
+</html>

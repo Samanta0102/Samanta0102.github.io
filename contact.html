@@ -16,7 +16,6 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* MENU */
         nav {
             width: 100%;
             position: fixed;
@@ -29,6 +28,7 @@
             backdrop-filter: blur(6px);
             z-index: 1000;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
@@ -40,10 +40,9 @@
             color: #5BA5C4;
         }
 
-        /* CONTENUTO */
         .container {
             padding: 150px 20px;
-            max-width: 600px;
+            max-width: 650px;
             margin: auto;
             text-align: center;
         }
@@ -52,26 +51,27 @@
             font-family: 'Playfair Display', serif;
             font-size: 48px;
             color: #F9F6D5;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
 
-        p {
-            font-size: 18px;
-            color: #cfcfcf;
-            line-height: 1.7;
-            margin-bottom: 40px;
-        }
-
-        a.contact-link {
-            display: block;
-            margin: 15px 0;
+        .contact-link {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
             font-size: 20px;
             color: #5BA5C4;
             text-decoration: none;
+            margin-bottom: 18px;
             transition: 0.3s;
         }
-        a.contact-link:hover {
+
+        .contact-link:hover {
             color: #d9b26f;
+        }
+
+        .icon {
+            font-size: 22px;
         }
     </style>
 </head>
@@ -88,18 +88,23 @@
 
         <h1>Contatti</h1>
 
-        <p>
-            Per collaborazioni, richieste o informazioni puoi contattarmi tramite email o LinkedIn.  
-            Rispondo sempre nel più breve tempo possibile.
-        </p>
-
-        <a href="mailto:samanta0102@gmail.com" class="contact-link">📧 samanta0102@gmail.com</a>
-
-        <a href="https://www.linkedin.com/in/samanta-bua" target="_blank" class="contact-link">
-            🔗 LinkedIn – Samanta Bua
+        <!-- EMAIL 1 -->
+        <a href="mailto:sami22misa@gmail.com" class="contact-link">
+            <span class="icon">📧</span> sami22misa@gmail.com
         </a>
 
-        <a href="portfolio.html" class="contact-link" style="margin-top:40px; color:#A52B68;">
+        <!-- EMAIL 2 -->
+        <a href="mailto:samy-kk@hotmail.it" class="contact-link">
+            <span class="icon">📧</span> samy-kk@hotmail.it
+        </a>
+
+        <!-- LINKEDIN (versione breve e professionale) -->
+        <a href="https://www.linkedin.com/in/samanta-bua" target="_blank" class="contact-link">
+            <span class="icon">🔗</span> Profilo LinkedIn
+        </a>
+
+        <!-- TORNA AL PORTFOLIO -->
+        <a href="portfolio.html" class="contact-link" style="color:#A52B68; margin-top:50px;">
             ← Torna al Portfolio
         </a>
 

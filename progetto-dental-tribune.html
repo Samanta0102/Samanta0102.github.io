@@ -16,6 +16,7 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* MENU */
         nav {
             width: 100%;
             position: fixed;
@@ -23,7 +24,7 @@
             left: 0;
             padding: 25px 50px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(6px);
             z-index: 1000;
@@ -32,7 +33,7 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 40px;
+            margin-right: 40px;
             font-size: 16px;
             transition: 0.3s;
         }
@@ -40,6 +41,7 @@
             color: #5BA5C4;
         }
 
+        /* CONTENUTO */
         .container {
             padding: 150px 60px 60px;
             max-width: 900px;
@@ -61,19 +63,21 @@
             text-align: left;
         }
 
-        .full-img {
-            width: 100%;
-            border-radius: 12px;
-            margin: 30px 0;
-        }
-
         p {
             line-height: 1.7;
-            color: #cfcfcf;
             font-size: 17px;
-            text-align: left;
+            color: #d1d1d1;
         }
 
+        /* IMMAGINE PRINCIPALE RIDOTTA */
+        .full-img {
+            width: 70%;          /* ridotta per risultare elegante */
+            margin: 30px auto;
+            display: block;
+            border-radius: 12px;
+        }
+
+        /* BOTTONI */
         a.button {
             display: inline-block;
             margin-top: 25px;
@@ -87,10 +91,12 @@
         a.button:hover {
             opacity: 0.85;
         }
+
     </style>
 </head>
 <body>
 
+    <!-- MENU -->
     <nav>
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
@@ -103,16 +109,20 @@
         <div class="subtitle">Progetto editoriale per la rivista internazionale Dental Tribune</div>
 
         <p>
-            Ho realizzato la grafica e l’impaginazione di questo articolo pubblicato su 
+            Ho realizzato la grafica e l’impaginazione di questo articolo pubblicato su
             <strong>Dental Tribune International</strong>, una delle riviste più autorevoli nel settore odontoiatrico.
         </p>
 
         <p>
-            Questo progetto è stato realizzato per RESISTA (Ing. Carlo Alberto Issoglio & C. S.R.L.),
-            azienda specializzata nel settore implantologia orale.
+            Questo progetto è stato realizzato per <strong>RESISTA (Ing. Carlo Alberto Issoglio & C. S.R.L.)</strong>,
+            azienda specializzata nel settore dell'implantologia orale.
         </p>
 
         <img src="dental-tribune-full.jpg" class="full-img" alt="Dental Tribune Full">
+
+        <p>
+            Il lavoro è stato realizzato in occasione di <strong>AEEDC Dubai</strong>, uno degli eventi più importanti nel mondo dentale.
+        </p>
 
         <a class="button" href="today AEEDC Dubai Feb. 4–6, 2025 (1).pdf" download>Scarica il PDF originale</a>
         <a class="button" href="https://it.dental-tribune.com" target="_blank">Vai alla rivista</a>

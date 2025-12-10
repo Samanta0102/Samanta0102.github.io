@@ -16,6 +16,7 @@
             font-family: 'Inter', sans-serif;
         }
 
+        /* MENU */
         nav {
             width: 100%;
             position: fixed;
@@ -23,7 +24,7 @@
             left: 0;
             padding: 25px 50px;
             display: flex;
-            justify-content: flex-end;
+            justify-content: flex-start;
             background: rgba(0, 0, 0, 0.45);
             backdrop-filter: blur(6px);
             z-index: 1000;
@@ -32,7 +33,7 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            margin-left: 40px;
+            margin-right: 40px;
             font-size: 16px;
             transition: 0.3s;
         }
@@ -40,6 +41,7 @@
             color: #5BA5C4;
         }
 
+        /* CONTENUTO */
         .container {
             padding: 150px 60px 60px;
             max-width: 1100px;
@@ -54,43 +56,47 @@
             text-align: left;
         }
 
+        /* GRIGLIA */
         .grid {
             display: grid;
-            gap: 40px;
+            gap: 70px; /* più elegante e arioso */
         }
 
         .project {
             width: 100%;
-            text-align: center;
+            text-align: left; 
         }
 
         .project img {
-            width: 60%;
-            margin: 0 auto;
-            display: block;
+            width: 45%;          /* ridimensionato più elegante */
             border-radius: 12px;
+            display: block;
+            margin-bottom: 18px;
             transition: 0.3s;
         }
+
         .project img:hover {
             transform: scale(1.02);
-            opacity: 0.85;
+            opacity: 0.8;
         }
 
         .project-title {
-            font-size: 22px;
-            margin-top: 12px;
+            font-size: 24px;
             color: #5BA5C4;
+            margin-bottom: 5px;
         }
 
         .project-desc {
-            font-size: 15px;
+            font-size: 16px;
             color: #bbb;
-            margin-top: 4px;
         }
+
     </style>
 </head>
+
 <body>
 
+    <!-- MENU -->
     <nav>
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
@@ -101,11 +107,14 @@
         <h1>Portfolio</h1>
 
         <div class="grid">
+
+            <!-- PROGETTO 1 -->
             <a class="project" href="progetto-dental-tribune.html">
                 <img src="dental-tribune-thumb.jpg" alt="Dental Tribune Project">
                 <div class="project-title">Articolo e impaginato – Dental Tribune</div>
                 <div class="project-desc">Progetto editoriale per la rivista internazionale Dental Tribune</div>
             </a>
+
         </div>
     </div>
 

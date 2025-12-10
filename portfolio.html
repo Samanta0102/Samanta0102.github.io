@@ -16,7 +16,6 @@
             font-family: 'Inter', sans-serif;
         }
 
-        /* MENU */
         nav {
             width: 100%;
             position: fixed;
@@ -52,49 +51,66 @@
             font-size: 52px;
             color: #F9F6D5;
             margin-bottom: 40px;
-            text-align: left;
         }
 
+        /* Griglia Portfolio */
         .grid {
             display: grid;
-            gap: 70px;
+            gap: 40px;
         }
 
         .project {
             width: 100%;
-            text-align: left;
+            display: block;
+            text-decoration: none;
         }
 
-        /* QUI È LA REGOLA IMPORTANTE */
         .project img {
-            width: 45%;
+            width: 100%;
             border-radius: 12px;
-            display: block;
-            margin-bottom: 18px;
             transition: 0.3s;
         }
 
         .project img:hover {
             transform: scale(1.02);
-            opacity: 0.8;
+            opacity: 0.85;
         }
 
         .project-title {
-            font-size: 24px;
+            font-size: 22px;
+            margin-top: 12px;
             color: #5BA5C4;
-            margin-bottom: 5px;
         }
 
         .project-desc {
-            font-size: 16px;
+            font-size: 15px;
             color: #bbb;
+            margin-top: 4px;
         }
 
+        /* WORK IN PROGRESS BOX */
+        .wip {
+            padding: 60px 40px;
+            border: 1px solid #333;
+            border-radius: 12px;
+            text-align: center;
+            color: #999;
+            font-size: 20px;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        .wip small {
+            font-size: 14px;
+            color: #666;
+            display: block;
+            margin-top: 10px;
+        }
     </style>
-</head>
 
+</head>
 <body>
 
+    <!-- MENU -->
     <nav>
         <a href="index.html">Home</a>
         <a href="portfolio.html">Portfolio</a>
@@ -106,12 +122,18 @@
 
         <div class="grid">
 
-            <!-- PROGETTO 1 -->
+            <!-- PROGETTO 1 – Dental Tribune -->
             <a class="project" href="progetto-dental-tribune.html">
                 <img src="dental-tribune-thumb.jpg" alt="Dental Tribune Project">
                 <div class="project-title">Articolo e impaginato – Dental Tribune</div>
-                <div class="project-desc">Progetto editoriale per la rivista internazionale Dental Tribune</div>
+                <div class="project-desc">Progetto editoriale realizzato per la rivista internazionale Dental Tribune</div>
             </a>
+
+            <!-- WORK IN PROGRESS -->
+            <div class="wip">
+                WORK IN PROGRESS
+                <small>Nuovi progetti in arrivo</small>
+            </div>
 
         </div>
     </div>

@@ -16,7 +16,7 @@ body {
     Roboto, sans-serif;
   line-height: 1.6;
   color: #e5e7eb;
-  background-color: #020617; /* quasi nero, leggermente blu */
+  background-color: #020617; /* quasi nero */
 }
 
 /* Contenuto centrale */
@@ -74,4 +74,293 @@ header {
 
 /* ====== HERO (HOME) ====== */
 
-.hero
+.hero {
+  padding-top: 2rem;
+  padding-bottom: 2.5rem;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.hero-kicker {
+  font-size: 0.9rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.hero-title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.6rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin: 0 0 0.5rem;
+}
+
+.hero-subtitle {
+  font-size: 1.02rem;
+  color: #e5e7eb;
+  margin: 0 0 1.25rem;
+}
+
+.hero-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  background-color: #111827;
+  color: #fbbf24;
+  border: 1px solid #1f2937;
+}
+
+.hero-cta {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.1rem;
+  border-radius: 999px;
+  background-color: #f97316;
+  color: #0b1120;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.hero-cta:hover {
+  background-color: #fb923c;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  max-width: 260px;
+  border-radius: 1.5rem;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.7);
+  border: 1px solid #1f2937;
+}
+
+/* ====== SEZIONI GENERICHE (ABOUT, SKILLS, CONTACT) ====== */
+
+.section {
+  margin-top: 2.5rem;
+}
+
+.section h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.section p {
+  color: #d1d5db;
+}
+
+.section-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.5rem;
+}
+
+.section-card {
+  padding: 1.25rem 1.1rem;
+  border-radius: 0.9rem;
+  background-color: #020617;
+  border: 1px solid #1f2937;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.65);
+}
+
+.section-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.section-card ul {
+  margin: 0.35rem 0 0;
+  padding-left: 1.1rem;
+  font-size: 0.9rem;
+  color: #d1d5db;
+}
+
+/* Link generici nel testo */
+
+a {
+  color: #f97316;
+}
+
+a:hover {
+  color: #fb923c;
+}
+
+/* ====== INTESTAZIONI PAGINA (PORTFOLIO, PROGETTI) ====== */
+
+.page-header h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.page-header p {
+  margin-top: 0.25rem;
+  color: #9ca3af;
+  max-width: 52rem;
+}
+
+.page-header {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid #111827;
+  padding-bottom: 1.5rem;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-meta {
+  color: #9ca3af;
+  margin-bottom: 0.5rem;
+}
+
+.project-description {
+  margin-top: 0;
+}
+
+/* ====== LISTA PROGETTI (PORTFOLIO) ====== */
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.project {
+  padding: 1.5rem 1.25rem;
+  border-radius: 0.9rem;
+  background-color: #020617;
+  border: 1px solid #1f2937;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* tag sopra il titolo del progetto */
+.project-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.18rem 0.7rem;
+  margin-bottom: 0.4rem;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  background-color: #111827;
+  color: #fbbf24;
+  border: 1px solid #1f2937;
+}
+
+.project.project-soon .project-tag {
+  background-color: #1f2937;
+  color: #fcd34d;
+  border-color: #f59e0b;
+}
+
+.project-soon {
+  background-color: #111827;
+  border-color: #f59e0b;
+}
+
+.project-link {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #f97316;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-link:hover {
+  text-decoration: underline;
+}
+
+.small {
+  font-size: 0.85rem;
+  color: #9ca3af;
+}
+
+/* ====== PAGINE DI PROGETTO ====== */
+
+.project-detail article {
+  margin-bottom: 1.5rem;
+}
+
+/* Galleria immagini */
+
+.project-gallery {
+  margin-top: 2.5rem;
+  border-top: 1px solid #111827;
+  padding-top: 1.5rem;
+}
+
+.project-gallery h2 {
+  margin-top: 0;
+}
+
+.project-gallery figure {
+  margin: 1.5rem 0;
+}
+
+.project-gallery img {
+  max-width: 100%;
+  display: block;
+  border-radius: 0.9rem;
+  border: 1px solid #1f2937;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
+}
+
+.project-gallery figcaption {
+  font-size: 0.9rem;
+  color: #d1d5db;
+  margin-top: 0.5rem;
+}
+
+/* Link indietro */
+
+.back-link {
+  margin-top: 2rem;
+}
+
+.back-link a {
+  color: #f97316;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+/* ====== FOOTER ====== */
+
+footer {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  font-size: 0.85rem;
+  color: #6b7280;
+}

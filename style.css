@@ -1,4 +1,7 @@
-/* ====== Stili generali ====== */
+/* ====== FONT ====== */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap");
+
+/* ====== STILI GENERALI ====== */
 
 *,
 *::before,
@@ -9,11 +12,11 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     Roboto, sans-serif;
   line-height: 1.6;
-  color: #111827;
-  background-color: #f5f5f7;
+  color: #e5e7eb;
+  background-color: #020617; /* quasi nero, leggermente blu */
 }
 
 /* Contenuto centrale */
@@ -21,15 +24,14 @@ body {
 main {
   max-width: 960px;
   margin: 0 auto;
-  padding: 2rem 1.5rem 3rem;
-  background-color: #ffffff;
+  padding: 2.5rem 1.5rem 3rem;
 }
 
-/* ====== Navigazione ====== */
+/* ====== NAVIGAZIONE ====== */
 
 header {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  background-color: #020617;
+  border-bottom: 1px solid #111827;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -47,16 +49,16 @@ header {
 
 .main-nav a {
   text-decoration: none;
-  color: #4b5563;
+  color: #9ca3af;
   position: relative;
 }
 
 .main-nav a:hover {
-  color: #111827;
+  color: #f9fafb;
 }
 
 .main-nav a.active {
-  color: #111827;
+  color: #f9fafb;
   font-weight: 600;
 }
 
@@ -64,140 +66,12 @@ header {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -0.2rem;
+  bottom: -0.25rem;
   width: 100%;
   height: 2px;
-  background-color: #111827;
+  background-color: #f97316; /* arancio caldo */
 }
 
-/* ====== Tipografia sezioni ====== */
+/* ====== HERO (HOME) ====== */
 
-.page-header h1 {
-  font-size: 2.1rem;
-  margin-bottom: 0.25rem;
-}
-
-.page-header p {
-  margin-top: 0.25rem;
-  color: #4b5563;
-  max-width: 52rem;
-}
-
-.page-header {
-  margin-bottom: 2.5rem;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 1.5rem;
-}
-
-h2 {
-  font-size: 1.35rem;
-  margin-top: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-.project-meta {
-  color: #4b5563;
-  margin-bottom: 0.5rem;
-}
-
-.project-description {
-  margin-top: 0;
-}
-
-/* ====== Lista progetti (portfolio) ====== */
-
-.projects {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.project {
-  padding: 1.5rem 1.25rem;
-  border-radius: 0.75rem;
-  background-color: #f9fafb;
-  border: 1px solid #e5e7eb;
-}
-
-.project-soon {
-  background-color: #fef3c7;
-  border-color: #f59e0b;
-}
-
-.project-link {
-  display: inline-block;
-  margin-top: 0.75rem;
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.project-link:hover {
-  text-decoration: underline;
-}
-
-.small {
-  font-size: 0.85rem;
-  color: #6b7280;
-}
-
-/* ====== Pagine di progetto ====== */
-
-.project-detail article {
-  margin-bottom: 1.5rem;
-}
-
-/* Galleria immagini */
-
-.project-gallery {
-  margin-top: 2.5rem;
-  border-top: 1px solid #e5e7eb;
-  padding-top: 1.5rem;
-}
-
-.project-gallery h2 {
-  margin-top: 0;
-}
-
-.project-gallery figure {
-  margin: 1.5rem 0;
-}
-
-.project-gallery img {
-  max-width: 100%;
-  display: block;
-  border-radius: 0.75rem;
-  border: 1px solid #e5e7eb;
-}
-
-.project-gallery figcaption {
-  font-size: 0.9rem;
-  color: #4b5563;
-  margin-top: 0.5rem;
-}
-
-/* Link indietro */
-
-.back-link {
-  margin-top: 2rem;
-}
-
-.back-link a {
-  color: #2563eb;
-  text-decoration: none;
-  font-size: 0.95rem;
-}
-
-.back-link a:hover {
-  text-decoration: underline;
-}
-
-/* ====== Footer ====== */
-
-footer {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 1.5rem;
-  font-size: 0.85rem;
-  color: #6b7280;
-}
+.hero

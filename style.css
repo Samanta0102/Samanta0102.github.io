@@ -385,14 +385,14 @@ footer {
     padding-bottom: 2rem;
   }
 
-  /* su tablet/medio: foto sopra, testo sotto (come adesso) */
+  /* su tablet/medio: foto sotto, testo sopra */
   .hero-grid {
     display: block;
   }
 
   .hero-image {
     justify-content: center;
-    margin-bottom: 1.8rem;
+    margin-top: 2.2rem;    /* <<< più spazio sotto il bottone */
   }
 
   .hero-image img {
@@ -436,10 +436,9 @@ footer {
     padding: 0.18rem 0.6rem;
   }
 
-  /* >>> QUI rimpiccioliamo la foto SOLO su mobile <<< */
   .hero-image img {
-    max-width: 70%;      /* circa 70% della larghezza del contenitore */
-    max-height: 420px;   /* per non allungarsi troppo in verticale */
+    max-width: 70%;
+    max-height: 420px;
   }
 
   .hero-cta {

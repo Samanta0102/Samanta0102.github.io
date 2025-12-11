@@ -385,23 +385,22 @@ footer {
     padding-bottom: 2rem;
   }
 
+  /* su tablet/medio: foto sopra, testo sotto (come adesso) */
   .hero-grid {
-    grid-template-columns: 1fr;        /* da due colonne a una */
-    gap: 1.75rem;
+    display: block;
   }
 
-  /* Mostra prima la foto e poi il testo, come nelle app */
   .hero-image {
-    order: -1;
-    justify-content: flex-start;
+    justify-content: center;
+    margin-bottom: 1.8rem;
   }
 
   .hero-image img {
-    max-width: 220px;
+    max-width: 260px;
   }
 
   .hero-title {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
   }
 
   .hero-subtitle {
@@ -421,7 +420,7 @@ footer {
   }
 
   .hero-title {
-    font-size: 1.8rem;
+    font-size: 2rem;
   }
 
   .hero-subtitle {
@@ -435,6 +434,12 @@ footer {
   .badge {
     font-size: 0.75rem;
     padding: 0.18rem 0.6rem;
+  }
+
+  /* >>> QUI rimpiccioliamo la foto SOLO su mobile <<< */
+  .hero-image img {
+    max-width: 70%;      /* circa 70% della larghezza del contenitore */
+    max-height: 420px;   /* per non allungarsi troppo in verticale */
   }
 
   .hero-cta {

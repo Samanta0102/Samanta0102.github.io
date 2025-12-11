@@ -1,114 +1,74 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contatti – Samanta Bua</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background: #000;
-            color: #fff;
-            font-family: 'Inter', sans-serif;
-        }
-
-        nav {
-            width: 100%;
-            position: fixed;
-            top: 0;
-            left: 0;
-            padding: 25px 50px;
-            display: flex;
-            justify-content: flex-start;
-            background: rgba(0, 0, 0, 0.45);
-            backdrop-filter: blur(6px);
-            z-index: 1000;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            margin-right: 40px;
-            font-size: 16px;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            color: #5BA5C4;
-        }
-
-        .container {
-            padding: 150px 20px;
-            max-width: 650px;
-            margin: auto;
-            text-align: center;
-        }
-
-        h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 48px;
-            color: #F9F6D5;
-            margin-bottom: 25px;
-        }
-
-        .contact-link {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            font-size: 20px;
-            color: #5BA5C4;
-            text-decoration: none;
-            margin-bottom: 18px;
-            transition: 0.3s;
-        }
-
-        .contact-link:hover {
-            color: #d9b26f;
-        }
-
-        .icon {
-            font-size: 22px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <title>Contatti – Samanta Bua</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="portfolio.html">Portfolio</a>
-        <a href="contact.html">Contact</a>
+  <header>
+    <nav class="main-nav">
+      <a href="index.html">Home</a>
+      <a href="index.html#about">About</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="contact.html" class="active">Contact</a>
     </nav>
+  </header>
 
-    <div class="container">
+  <main>
+    <section class="page-header">
+      <h1>Contatti</h1>
+      <p>
+        Se vuoi parlarmi di una collaborazione, di un progetto grafico o di contenuti
+        per i social, puoi scrivermi direttamente ai contatti qui sotto.
+      </p>
+    </section>
 
-        <h1>Contatti</h1>
+    <section class="section" id="contact">
+      <div class="section-card">
+        <h2>Come contattarmi</h2>
+        <p>
+          Preferisco una prima comunicazione via mail: puoi raccontarmi in breve
+          di cosa hai bisogno e ti risponderò il prima possibile.
+        </p>
 
-        <!-- EMAIL 1 -->
-        <a href="mailto:sami22misa@gmail.com" class="contact-link">
-            <span class="icon">📧</span> sami22misa@gmail.com
-        </a>
+        <ul>
+          <li>
+            <strong>Email</strong> ·
+            <a href="mailto:sami22misa@gmail.com">sami22misa@gmail.com</a>
+          </li>
+          <li>
+            <strong>Portfolio</strong> ·
+            <a href="https://samanta0102.github.io" target="_blank" rel="noopener noreferrer">
+              samanta0102.github.io
+            </a>
+          </li>
+          <li>
+            <strong>GitHub</strong> ·
+            <a href="https://github.com/Samanta0102" target="_blank" rel="noopener noreferrer">
+              github.com/Samanta0102
+            </a>
+          </li>
+          <li>
+            <strong>LinkedIn</strong> ·
+            <a href="https://www.linkedin.com/in/samanta-bua-96a741130/"
+               target="_blank" rel="noopener noreferrer">
+              linkedin.com/in/samanta-bua-96a741130
+            </a>
+          </li>
+        </ul>
 
-        <!-- EMAIL 2 -->
-        <a href="mailto:samy-kk@hotmail.it" class="contact-link">
-            <span class="icon">📧</span> samy-kk@hotmail.it
-        </a>
+        <p class="small" style="margin-top:1rem;">
+          Per richieste di lavoro o collaborazioni puoi contattarmi via mail oppure
+          tramite LinkedIn: ti risponderò appena possibile.
+        </p>
+      </div>
+    </section>
+  </main>
 
-        <!-- LINKEDIN (versione breve e professionale) -->
-        <a href="https://www.linkedin.com/in/samanta-bua" target="_blank" class="contact-link">
-            <span class="icon">🔗</span> Profilo LinkedIn
-        </a>
-
-        <!-- TORNA AL PORTFOLIO -->
-        <a href="portfolio.html" class="contact-link" style="color:#A52B68; margin-top:50px;">
-            ← Torna al Portfolio
-        </a>
-
-    </div>
-
+  <footer>
+    <p>© 2025 Samanta Bua</p>
+  </footer>
 </body>
 </html>

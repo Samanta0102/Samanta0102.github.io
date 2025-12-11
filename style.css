@@ -385,14 +385,15 @@ footer {
     padding-bottom: 2rem;
   }
 
-  /* >>> CAMBIO IMPORTANTE QUI: hero in colonna singola <<< */
   .hero-grid {
-    display: block;
+    grid-template-columns: 1fr;        /* da due colonne a una */
+    gap: 1.75rem;
   }
 
+  /* Mostra prima la foto e poi il testo, come nelle app */
   .hero-image {
+    order: -1;
     justify-content: flex-start;
-    margin-bottom: 1.5rem;
   }
 
   .hero-image img {
@@ -405,7 +406,6 @@ footer {
 
   .hero-subtitle {
     font-size: 0.96rem;
-    max-width: 26rem;
   }
 }
 
